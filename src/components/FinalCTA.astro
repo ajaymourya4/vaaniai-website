@@ -1,0 +1,20 @@
+---
+import DownloadButtons from './DownloadButtons.astro';
+---
+
+<section id="download" aria-labelledby="cta-heading" class="py-20 lg:py-28 relative overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-b from-accent-purple/10 via-dark-bg to-dark-bg"></div>
+  <div class="section-container text-center relative z-10">
+    <h2 id="cta-heading" class="text-3xl lg:text-5xl font-bold">
+      Ready to Speak English<br />
+      <span class="gradient-text">with Confidence?</span>
+    </h2>
+    <p class="text-text-secondary text-lg mt-6 max-w-xl mx-auto">
+      Stop hesitating and start speaking. Your AI coach is waiting.
+    </p>
+    <div class="flex justify-center mt-8">
+      <DownloadButtons size="large" />
+    </div>
+    <p class="text-text-muted text-sm mt-4">Free to start. Available on iOS and Android.</p>
+  </div>
+</section>

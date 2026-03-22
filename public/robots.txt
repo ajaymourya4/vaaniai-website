@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://getvaani.app/sitemap-index.xml

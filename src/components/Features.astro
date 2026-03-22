@@ -1,0 +1,46 @@
+---
+import SectionHeading from './SectionHeading.astro';
+import MicIcon from './icons/MicIcon.astro';
+import ChatIcon from './icons/ChatIcon.astro';
+import FeedbackIcon from './icons/FeedbackIcon.astro';
+import ShieldIcon from './icons/ShieldIcon.astro';
+import ClockIcon from './icons/ClockIcon.astro';
+import TrendingIcon from './icons/TrendingIcon.astro';
+import { features } from '@data/features';
+
+const iconMap: Record<string, any> = {
+  mic: MicIcon,
+  chat: ChatIcon,
+  feedback: FeedbackIcon,
+  shield: ShieldIcon,
+  clock: ClockIcon,
+  trending: TrendingIcon,
+};
+---
+
+<section id="features" aria-labelledby="features-heading" class="py-20 lg:py-28">
+  <div class="section-container">
+    <SectionHeading
+      id="features-heading"
+      subtitle="Everything You Need"
+      title="Features Built for Fluency"
+      description="Every feature is designed to get you speaking confidently"
+    />
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
+      {features.map((feature) => {
+        const Icon = iconMap[feature.icon];
+        return (
+          <div class="p-6 rounded-2xl glow-border group hover:glow-purple transition-all duration-300">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-r from-accent-purple/20 to-accent-blue/20 flex items-center justify-center mb-4 text-accent-purple">
+              <Icon class="w-6 h-6" />
+            </div>
+            <h3 class="text-lg font-semibold">{feature.title}</h3>
+            <p class="text-text-secondary mt-2 text-sm leading-relaxed">
+              {feature.description}
+            </p>
+          </div>
+        );
+      })}
+    </div>
+  </div>
+</section>

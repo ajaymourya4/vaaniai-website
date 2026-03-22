@@ -1,0 +1,32 @@
+---
+import SectionHeading from './SectionHeading.astro';
+import { faqData } from '@data/faq';
+---
+
+<section id="faq" aria-labelledby="faq-heading" class="py-20 lg:py-28">
+  <div class="section-container max-w-3xl">
+    <SectionHeading
+      id="faq-heading"
+      subtitle="Got Questions?"
+      title="Frequently Asked Questions"
+    />
+    <dl class="mt-12 space-y-4">
+      {faqData.map((item, i) => (
+        <details
+          class="group rounded-2xl border border-dark-border bg-dark-card overflow-hidden"
+          {...(i === 0 ? { open: true } : {})}
+        >
+          <summary class="flex justify-between items-center cursor-pointer p-6 font-semibold text-lg select-none [&::-webkit-details-marker]:hidden list-none">
+            <span>{item.question}</span>
+            <span class="ml-4 shrink-0 transition-transform duration-200 group-open:rotate-45 text-2xl text-accent-purple">
+              +
+            </span>
+          </summary>
+          <div class="px-6 pb-6 text-text-secondary leading-relaxed">
+            {item.answer}
+          </div>
+        </details>
+      ))}
+    </dl>
+  </div>
+</section>

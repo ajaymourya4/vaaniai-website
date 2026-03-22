@@ -1,0 +1,43 @@
+---
+import SectionHeading from './SectionHeading.astro';
+
+const steps = [
+  {
+    title: 'Choose a Scenario',
+    description:
+      'Pick from 30+ real-life situations: job interviews, ordering coffee, small talk, and more.',
+  },
+  {
+    title: 'Start Speaking',
+    description:
+      'Have a natural voice conversation with your AI coach. Speak at your own pace.',
+  },
+  {
+    title: 'Get Instant Feedback',
+    description:
+      'Receive detailed feedback on grammar, pronunciation, and vocabulary after each session.',
+  },
+];
+---
+
+<section id="how-it-works" aria-labelledby="how-heading" class="py-20 lg:py-28 bg-dark-surface/30">
+  <div class="section-container">
+    <SectionHeading
+      id="how-heading"
+      subtitle="Simple & Effective"
+      title="How Vaani Works"
+      description="Start speaking better English in three easy steps"
+    />
+    <ol class="grid md:grid-cols-3 gap-8 mt-16">
+      {steps.map((step, i) => (
+        <li class="relative text-center p-8 rounded-2xl glow-border">
+          <div class="w-12 h-12 rounded-full bg-gradient-to-r from-accent-purple to-accent-blue flex items-center justify-center text-white font-bold text-lg mx-auto">
+            {i + 1}
+          </div>
+          <h3 class="text-xl font-semibold mt-6">{step.title}</h3>
+          <p class="text-text-secondary mt-3 leading-relaxed">{step.description}</p>
+        </li>
+      ))}
+    </ol>
+  </div>
+</section>

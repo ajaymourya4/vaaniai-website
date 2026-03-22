@@ -1,0 +1,35 @@
+---
+import SectionHeading from './SectionHeading.astro';
+import { testimonials } from '@data/testimonials';
+---
+
+<section id="testimonials" aria-labelledby="testimonials-heading" class="py-20 lg:py-28 bg-dark-surface/30">
+  <div class="section-container">
+    <SectionHeading
+      id="testimonials-heading"
+      subtitle="What Learners Say"
+      title="Real Stories, Real Confidence"
+    />
+    <div class="grid md:grid-cols-3 gap-6 mt-16">
+      {testimonials.map((t) => (
+        <blockquote class="p-6 rounded-2xl bg-dark-card border border-dark-border">
+          <div class="flex gap-1 text-yellow-400 mb-4" aria-label={`${t.rating} out of 5 stars`}>
+            {Array.from({ length: t.rating }).map(() => (
+              <span aria-hidden="true">&#9733;</span>
+            ))}
+          </div>
+          <p class="text-text-primary leading-relaxed">"{t.quote}"</p>
+          <footer class="flex items-center gap-3 mt-6">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-r from-accent-purple to-accent-blue flex items-center justify-center text-white text-sm font-bold">
+              {t.name.charAt(0)}
+            </div>
+            <cite class="not-italic">
+              <p class="font-semibold text-sm">{t.name}</p>
+              <p class="text-text-muted text-xs">{t.role}</p>
+            </cite>
+          </footer>
+        </blockquote>
+      ))}
+    </div>
+  </div>
+</section>
