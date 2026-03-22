@@ -2,9 +2,9 @@ export const siteConfig = {
   name: 'Vaani',
   tagline: 'Your AI English Speaking Coach',
   url: 'https://getvaani.app',
-  title: 'Vaani - AI English Speaking Coach | Speak English Fluently & Confidently',
+  title: 'Vaani - Practice English Speaking Online | AI English Coach App',
   description:
-    'Practice English speaking with an AI coach. Get instant feedback on grammar, pronunciation & vocabulary. Build confidence through real conversations. Free to start.',
+    'Improve your English speaking with Vaani, an AI-powered English speaking practice app. Get instant feedback on grammar, pronunciation & vocabulary. Practice real conversations and speak English fluently. Free to start.',
   keywords: [
     'english speaking practice app',
     'AI english coach',
