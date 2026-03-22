@@ -30,8 +30,8 @@ const iconMap: Record<string, any> = {
       {features.map((feature) => {
         const Icon = iconMap[feature.icon];
         return (
-          <div class="p-6 rounded-2xl glow-border group hover:glow-purple transition-all duration-300">
-            <div class="w-12 h-12 rounded-xl bg-gradient-to-r from-accent-purple/20 to-accent-blue/20 flex items-center justify-center mb-4 text-accent-purple">
+          <div class="p-6 rounded-2xl bg-dark-card border border-dark-border/60 hover:border-accent-purple/40 transition-all duration-300">
+            <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-accent-purple to-accent-blue flex items-center justify-center mb-4 text-white">
               <Icon class="w-6 h-6" />
             </div>
             <h3 class="text-lg font-semibold">{feature.title}</h3>

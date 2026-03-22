@@ -6,16 +6,19 @@ const steps = [
     title: 'Choose a Scenario',
     description:
       'Pick from 30+ real-life situations: job interviews, ordering coffee, small talk, and more.',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/></svg>`,
   },
   {
     title: 'Start Speaking',
     description:
       'Have a natural voice conversation with your AI coach. Speak at your own pace.',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="22"/></svg>`,
   },
   {
     title: 'Get Instant Feedback',
     description:
       'Receive detailed feedback on grammar, pronunciation, and vocabulary after each session.',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838.838-2.872a2 2 0 0 1 .506-.854z"/></svg>`,
   },
 ];
 ---
@@ -28,14 +31,22 @@ const steps = [
       title="How Vaani Works"
       description="Start speaking better English in three easy steps"
     />
-    <ol class="grid md:grid-cols-3 gap-8 mt-16">
+    <ol class="grid md:grid-cols-3 gap-6 mt-16">
       {steps.map((step, i) => (
-        <li class="relative text-center p-8 rounded-2xl glow-border">
-          <div class="w-12 h-12 rounded-full bg-gradient-to-r from-accent-purple to-accent-blue flex items-center justify-center text-white font-bold text-lg mx-auto">
-            {i + 1}
+        <li class="relative group">
+          <div class="p-8 rounded-2xl bg-dark-card border border-dark-border/60 hover:border-accent-purple/40 transition-all duration-300 h-full">
+            {/* Step number + icon row */}
+            <div class="flex items-center gap-4 mb-5">
+              <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-accent-purple to-accent-blue flex items-center justify-center text-white shrink-0">
+                <Fragment set:html={step.icon} />
+              </div>
+              <span class="text-sm font-mono font-semibold text-accent-purple tracking-wider">
+                STEP {i + 1}
+              </span>
+            </div>
+            <h3 class="text-xl font-semibold">{step.title}</h3>
+            <p class="text-text-secondary mt-2 leading-relaxed text-[0.95rem]">{step.description}</p>
           </div>
-          <h3 class="text-xl font-semibold mt-6">{step.title}</h3>
-          <p class="text-text-secondary mt-3 leading-relaxed">{step.description}</p>
         </li>
       ))}
     </ol>
