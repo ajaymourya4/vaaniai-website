@@ -6,9 +6,6 @@ import DownloadButtons from './DownloadButtons.astro';
   <div class="section-container">
     <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
       <div>
-        <p class="text-accent-purple font-semibold tracking-wide uppercase text-sm mb-4">
-          AI-Powered English Coach
-        </p>
         <h1 id="hero-heading" class="text-4xl md:text-5xl lg:text-7xl font-extrabold leading-[1.1]">
           Speak English
           <span class="gradient-text whitespace-nowrap">with Confidence</span>
@@ -20,7 +17,10 @@ import DownloadButtons from './DownloadButtons.astro';
         <div class="mt-8">
           <DownloadButtons />
         </div>
-        <p class="text-text-muted text-sm mt-4">Free to start. No credit card required.</p>
+        <p class="text-text-secondary text-sm mt-4 flex items-center gap-2">
+          <span class="inline-block w-2 h-2 rounded-full bg-green-400"></span>
+          Get started for free
+        </p>
       </div>
       <div class="relative flex justify-center">
         <div class="absolute inset-0 bg-gradient-to-r from-accent-purple/20 to-accent-blue/20 blur-3xl rounded-full"></div>
