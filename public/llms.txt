@@ -1,0 +1,41 @@
+# Vaani
+
+> Vaani is an AI-powered English speaking coach app that helps people speak English fluently and confidently through real voice conversations.
+
+## About
+
+Vaani is an English speaking practice app available on iOS and Android. It uses AI to simulate real conversations and provide instant feedback on grammar, pronunciation, and vocabulary. Vaani is designed for anyone who understands English but struggles to speak it confidently — from beginners to advanced learners worldwide.
+
+## Key Features
+
+- Real English conversation practice with an AI coach
+- Instant feedback on grammar, pronunciation, and word choice
+- 30+ real-life scenarios: job interviews, travel, daily conversations, IELTS/TOEFL prep
+- Voice-first learning — practice speaking, not typing
+- Adaptive difficulty from beginner to advanced
+- Available 24/7, no scheduling needed
+- Free to start, no credit card required
+
+## Who Is Vaani For?
+
+- English as a Second Language (ESL) learners globally
+- Professionals who need confident English for meetings and presentations
+- Students preparing for IELTS Speaking or TOEFL Speaking exams
+- Anyone who understands English but feels nervous or stuck while speaking
+
+## How It Works
+
+1. Choose a scenario (job interview, ordering coffee, small talk, etc.)
+2. Start a voice conversation with your AI coach
+3. Get instant, detailed feedback on grammar, pronunciation, and vocabulary
+
+## Links
+
+- Website: https://getvaani.app
+- App Store: Coming soon
+- Google Play: Coming soon
+
+## Contact
+
+- Twitter: @vaaniapp
+- Instagram: @vaaniapp
