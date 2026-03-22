@@ -9,7 +9,7 @@ import { faqData } from '@data/faq';
       id="faq-heading"
       title="Frequently Asked Questions"
     />
-    <dl class="mt-12 space-y-4">
+    <div class="mt-12 space-y-4">
       {faqData.map((item, i) => (
         <details
           class="group rounded-2xl border border-dark-border bg-dark-card overflow-hidden"
@@ -26,6 +26,6 @@ import { faqData } from '@data/faq';
           </div>
         </details>
       ))}
-    </dl>
+    </div>
   </div>
 </section>
