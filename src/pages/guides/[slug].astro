@@ -76,7 +76,7 @@ const breadcrumbSchema = {
         <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mt-6">
           {guide.title}
         </h1>
-        <p class="text-text-secondary text-lg mt-6 leading-relaxed border-l-2 border-accent-purple pl-5">
+        <p class="text-text-secondary text-lg mt-6 leading-relaxed border-l-2 border-accent-blue pl-5">
           {guide.intro}
         </p>
 
@@ -92,7 +92,7 @@ const breadcrumbSchema = {
                   <ul class="mt-4 space-y-3">
                     {block.items.map((item) => (
                       <li class="flex gap-3 text-text-secondary leading-relaxed">
-                        <span class="text-accent-purple mt-1 shrink-0" aria-hidden="true">✓</span>
+                        <span class="text-accent-blue mt-1 shrink-0" aria-hidden="true">✓</span>
                         <span>{item}</span>
                       </li>
                     ))}
@@ -103,7 +103,7 @@ const breadcrumbSchema = {
                     {block.items.map((item, i) => (
                       <li class="rounded-2xl bg-dark-card border border-dark-border/60 p-6">
                         <h3 class="font-semibold text-lg flex items-start gap-3">
-                          <span class="w-7 h-7 rounded-lg bg-gradient-to-br from-accent-purple to-accent-blue flex items-center justify-center text-white text-sm font-bold shrink-0">
+                          <span class="w-7 h-7 rounded-lg bg-gradient-to-br from-brand-blue to-accent-purple flex items-center justify-center text-white text-sm font-bold shrink-0">
                             {i + 1}
                           </span>
                           {item.title}
@@ -118,14 +118,14 @@ const breadcrumbSchema = {
           </section>
         ))}
 
-        <section class="mt-14 rounded-3xl glow-border glow-purple p-8 lg:p-10">
+        <section class="mt-14 rounded-3xl glow-border glow-blue p-8 lg:p-10">
           <h2 class="text-2xl lg:text-3xl font-bold gradient-text inline-block">{guide.vaani.heading}</h2>
           <p class="text-text-secondary mt-4 leading-relaxed">{guide.vaani.intro}</p>
           <div class="grid md:grid-cols-[1fr_auto] gap-8 mt-8 items-start">
             <ol class="space-y-4">
               {guide.vaani.steps.map((step, i) => (
                 <li class="flex gap-3 text-text-secondary leading-relaxed">
-                  <span class="w-6 h-6 rounded-full bg-accent-purple/20 text-accent-purple flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">
+                  <span class="w-6 h-6 rounded-full bg-accent-blue/20 text-accent-blue flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">
                     {i + 1}
                   </span>
                   <span>{step}</span>
@@ -154,7 +154,7 @@ const breadcrumbSchema = {
               <details class="group rounded-2xl border border-dark-border bg-dark-card overflow-hidden">
                 <summary class="flex justify-between items-center cursor-pointer p-6 font-semibold select-none [&::-webkit-details-marker]:hidden list-none">
                   <span>{item.question}</span>
-                  <span class="ml-4 shrink-0 transition-transform duration-200 group-open:rotate-45 text-2xl text-accent-purple">+</span>
+                  <span class="ml-4 shrink-0 transition-transform duration-200 group-open:rotate-45 text-2xl text-accent-blue">+</span>
                 </summary>
                 <div class="px-6 pb-6 text-text-secondary leading-relaxed">{item.answer}</div>
               </details>
@@ -169,10 +169,10 @@ const breadcrumbSchema = {
               <li>
                 <a
                   href={`/guides/${related.slug}/`}
-                  class="block h-full rounded-2xl bg-dark-card border border-dark-border/60 hover:border-accent-purple/40 transition-colors p-5 text-sm font-semibold leading-snug"
+                  class="block h-full rounded-2xl bg-dark-card border border-dark-border/60 hover:border-accent-blue/40 transition-colors p-5 text-sm font-semibold leading-snug"
                 >
                   {related.title}
-                  <span class="block text-accent-purple mt-2 font-normal">Read guide →</span>
+                  <span class="block text-accent-blue mt-2 font-normal">Read guide →</span>
                 </a>
               </li>
             ))}

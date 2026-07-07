@@ -17,7 +17,7 @@ import { faqData } from '@data/faq';
         >
           <summary class="flex justify-between items-center cursor-pointer p-6 font-semibold text-lg select-none [&::-webkit-details-marker]:hidden list-none">
             <span>{item.question}</span>
-            <span class="ml-4 shrink-0 transition-transform duration-200 group-open:rotate-45 text-2xl text-accent-purple">
+            <span class="ml-4 shrink-0 transition-transform duration-200 group-open:rotate-45 text-2xl text-accent-blue">
               +
             </span>
           </summary>
@@ -26,7 +26,7 @@ import { faqData } from '@data/faq';
             {item.learnMore && (
               <a
                 href={item.learnMore.href}
-                class="block mt-3 text-accent-purple font-semibold hover:underline"
+                class="block mt-3 text-accent-blue font-semibold hover:underline"
                 aria-label={item.learnMore.label}
               >
                 Learn More →
