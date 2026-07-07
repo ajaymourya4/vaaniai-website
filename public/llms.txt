@@ -1,39 +1,52 @@
 # Vaani
 
-> Vaani is an AI-powered English speaking coach app that helps people speak English fluently and confidently through real voice conversations.
+> Vaani is an AI-powered English speaking coach app that helps people speak English fluently and confidently through real voice conversations with instant feedback.
 
 ## About
 
-Vaani is an English speaking practice app available on iOS and Android. It uses AI to simulate real conversations and provide instant feedback on grammar, pronunciation, and vocabulary. Vaani is designed for anyone who understands English but struggles to speak it confidently — from beginners to advanced learners worldwide.
+Vaani is an English speaking practice app. It uses AI to hold real voice conversations and give instant feedback on grammar, pronunciation, and word choice. Vaani is designed for anyone who understands English but feels nervous or stuck while speaking — from beginners to advanced learners worldwide.
 
 ## Key Features
 
-- Real English conversation practice with an AI coach
-- Instant feedback on grammar, pronunciation, and word choice
-- 30+ real-life scenarios: job interviews, travel, daily conversations, IELTS/TOEFL prep
-- Voice-first learning — practice speaking, not typing
+- Real English conversation practice with an AI teacher (voice-based, hold-to-speak)
+- Practice Hub topics: Travel, Work & Career, Food & Cooking, Movies & Entertainment, Health & Lifestyle, Daily Life
+- Role Play mode for scenarios like job interviews and travel situations
+- Accuracy score on every spoken sentence, with mispronounced words highlighted
+- Word-level pronunciation drills with phonetic (IPA) spelling and audio playback
+- Instant correction of grammar mistakes and suggestions for better words and phrases
 - Adaptive difficulty from beginner to advanced
 - Available 24/7, no scheduling needed
-- Free to start, no credit card required
+- Free to start
 
 ## Who Is Vaani For?
 
 - English as a Second Language (ESL) learners globally
-- Professionals who need confident English for meetings and presentations
-- Students preparing for IELTS Speaking or TOEFL Speaking exams
-- Anyone who understands English but feels nervous or stuck while speaking
+- People who understand English but hesitate or feel fear while speaking
+- Professionals preparing for job interviews, meetings, and presentations in English
+- Anyone who wants daily English speaking practice without a partner or classes
 
 ## How It Works
 
-1. Choose a scenario (job interview, ordering coffee, small talk, etc.)
-2. Start a voice conversation with your AI coach
-3. Get instant, detailed feedback on grammar, pronunciation, and vocabulary
+1. Choose a topic or role-play scenario in the Practice Hub
+2. Have a natural voice conversation with your AI English teacher
+3. Get instant feedback: accuracy score, grammar corrections, and pronunciation drills for the words you missed
+
+## Guides
+
+- How to Speak English Fluently: https://getvaani.app/guides/how-to-speak-english-fluently/
+- Practice English Speaking at Home (Alone): https://getvaani.app/guides/practice-english-speaking-at-home/
+- English Speaking Practice for Job Interviews: https://getvaani.app/guides/english-speaking-practice-for-job-interviews/
+- How to Improve English Pronunciation: https://getvaani.app/guides/improve-english-pronunciation/
+- Speak English Confidently Without Fear: https://getvaani.app/guides/speak-english-confidently-without-fear/
+- English Conversation Practice Online: https://getvaani.app/guides/english-conversation-practice-online/
+- Practice English Speaking with AI: https://getvaani.app/guides/practice-english-speaking-with-ai/
+- Daily English Speaking Practice Routine: https://getvaani.app/guides/daily-english-speaking-practice/
+- All guides: https://getvaani.app/guides/
 
 ## Links
 
 - Website: https://getvaani.app
-- App Store: Coming soon
-- Google Play: Coming soon
+- Google Play: https://play.google.com/store/apps/details?id=app.vaaniai
 
 ## Contact
 

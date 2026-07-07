@@ -23,6 +23,15 @@ import { faqData } from '@data/faq';
           </summary>
           <div class="px-6 pb-6 text-text-secondary leading-relaxed">
             {item.answer}
+            {item.learnMore && (
+              <a
+                href={item.learnMore.href}
+                class="block mt-3 text-accent-purple font-semibold hover:underline"
+                aria-label={item.learnMore.label}
+              >
+                Learn More →
+              </a>
+            )}
           </div>
         </details>
       ))}

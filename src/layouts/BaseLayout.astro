@@ -6,14 +6,19 @@ import { faqData } from '@data/faq';
 interface Props {
   title?: string;
   description?: string;
+  ogType?: 'website' | 'article';
+  schemas?: object[];
 }
 
 const {
   title = siteConfig.title,
   description = siteConfig.description,
+  ogType = 'website',
+  schemas = [],
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, siteConfig.url);
+const isHome = Astro.url.pathname === '/';
 
 const applicationSchema = {
   '@context': 'https://schema.org',
@@ -22,7 +27,7 @@ const applicationSchema = {
   description: siteConfig.description,
   url: siteConfig.url,
   applicationCategory: 'EducationalApplication',
-  operatingSystem: 'Android, iOS',
+  operatingSystem: 'Android',
   offers: {
     '@type': 'Offer',
     price: '0',
@@ -86,7 +91,7 @@ const breadcrumbSchema = {
       content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
     />
 
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
     <meta property="og:url" content={canonicalURL.href} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
@@ -141,16 +146,23 @@ const breadcrumbSchema = {
     />
     <script
       type="application/ld+json"
-      set:html={JSON.stringify(faqSchema)}
-    />
-    <script
-      type="application/ld+json"
       set:html={JSON.stringify(organizationSchema)}
     />
-    <script
-      type="application/ld+json"
-      set:html={JSON.stringify(breadcrumbSchema)}
-    />
+    {isHome && (
+      <script
+        type="application/ld+json"
+        set:html={JSON.stringify(faqSchema)}
+      />
+    )}
+    {isHome && (
+      <script
+        type="application/ld+json"
+        set:html={JSON.stringify(breadcrumbSchema)}
+      />
+    )}
+    {schemas.map((schema) => (
+      <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    ))}
 
     <meta name="theme-color" content="#0a0a0a" />
     <meta name="apple-mobile-web-app-capable" content="yes" />

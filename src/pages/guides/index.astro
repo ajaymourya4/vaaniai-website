@@ -1,0 +1,84 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Header from '@components/Header.astro';
+import Footer from '@components/Footer.astro';
+import DownloadButtons from '@components/DownloadButtons.astro';
+import { guides } from '@data/guides';
+import { siteConfig } from '@data/seo';
+
+const title = 'English Speaking Guides: Fluency, Confidence & Practice | Vaani';
+const description =
+  'Practical guides to speak English fluently and confidently: daily practice routines, pronunciation exercises, interview preparation, and AI conversation practice.';
+
+const collectionSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: title,
+  description,
+  url: `${siteConfig.url}/guides/`,
+  hasPart: guides.map((guide) => ({
+    '@type': 'Article',
+    headline: guide.title,
+    url: `${siteConfig.url}/guides/${guide.slug}/`,
+  })),
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: siteConfig.url },
+    { '@type': 'ListItem', position: 2, name: 'Guides', item: `${siteConfig.url}/guides/` },
+  ],
+};
+---
+
+<BaseLayout title={title} description={description} schemas={[collectionSchema, breadcrumbSchema]}>
+  <Header />
+  <main id="main-content">
+    <section class="py-16 lg:py-24">
+      <div class="section-container max-w-5xl">
+        <nav aria-label="Breadcrumb" class="text-sm text-text-muted">
+          <ol class="flex items-center gap-2">
+            <li><a href="/" class="hover:text-text-primary transition-colors">Home</a></li>
+            <li aria-hidden="true">/</li>
+            <li aria-current="page" class="text-text-secondary">Guides</li>
+          </ol>
+        </nav>
+        <h1 class="text-3xl md:text-5xl font-extrabold mt-6">
+          English Speaking <span class="gradient-text">Guides</span>
+        </h1>
+        <p class="text-text-secondary text-lg mt-4 max-w-2xl leading-relaxed">
+          Practical, step-by-step guides to help you speak English fluently and
+          confidently — from daily practice routines to interview preparation
+          and pronunciation drills.
+        </p>
+        <ul class="grid md:grid-cols-2 gap-5 mt-12">
+          {guides.map((guide) => (
+            <li>
+              <a
+                href={`/guides/${guide.slug}/`}
+                class="block h-full rounded-2xl bg-dark-card border border-dark-border/60 hover:border-accent-purple/40 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(139,92,246,0.12)] transition-all duration-300 p-7"
+              >
+                <h2 class="text-lg font-semibold leading-snug">{guide.title}</h2>
+                <p class="text-text-secondary mt-3 text-sm leading-relaxed">{guide.metaDescription}</p>
+                <span class="inline-block text-accent-purple mt-4 text-sm font-semibold">Read guide →</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+        <div class="mt-16 text-center rounded-3xl bg-dark-surface/50 border border-dark-border p-10">
+          <h2 class="text-2xl font-bold">Ready to put a guide into practice?</h2>
+          <p class="text-text-secondary mt-3 max-w-xl mx-auto">
+            Reading builds knowledge — speaking builds fluency. Download Vaani and
+            start a real English conversation with your AI coach right now.
+          </p>
+          <div class="flex justify-center mt-6">
+            <DownloadButtons />
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

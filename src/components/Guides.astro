@@ -1,0 +1,32 @@
+---
+import SectionHeading from './SectionHeading.astro';
+import { guides } from '@data/guides';
+---
+
+<section id="guides" aria-labelledby="guides-heading" class="py-20 lg:py-28 bg-dark-surface/30">
+  <div class="section-container">
+    <SectionHeading
+      id="guides-heading"
+      title="Guides to Speak English Fluently"
+      description="Practical, step-by-step answers to the questions every English learner asks — and how to put them into practice"
+    />
+    <ul class="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mt-16">
+      {guides.map((guide) => (
+        <li>
+          <a
+            href={`/guides/${guide.slug}/`}
+            class="block h-full rounded-2xl bg-dark-card border border-dark-border/60 hover:border-accent-purple/40 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(139,92,246,0.12)] transition-all duration-300 p-6"
+          >
+            <h3 class="font-semibold leading-snug">{guide.title}</h3>
+            <span class="inline-block text-accent-purple mt-4 text-sm font-semibold">Read guide →</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+    <p class="text-center mt-10">
+      <a href="/guides/" class="text-accent-purple font-semibold hover:underline">
+        Browse all English speaking guides →
+      </a>
+    </p>
+  </div>
+</section>

@@ -1,0 +1,51 @@
+---
+import SectionHeading from './SectionHeading.astro';
+
+const screenshots = [
+  {
+    src: '/images/screenshots/vaani-practice-hub-english-speaking-topics.jpg',
+    alt: 'Vaani Practice Hub with English speaking topics: Travel, Work & Career, Food & Cooking, Movies & Entertainment, Health & Lifestyle and Daily Life',
+    caption: 'Pick a real-life topic or role play',
+  },
+  {
+    src: '/images/screenshots/vaani-ai-english-conversation-practice.jpg',
+    alt: 'Real English conversation practice with Vaani’s AI teacher using voice messages about travelling to Japan',
+    caption: 'Talk naturally with your AI English teacher',
+  },
+  {
+    src: '/images/screenshots/vaani-instant-grammar-feedback-accuracy.jpg',
+    alt: 'Instant feedback in Vaani showing a 93% accuracy score on a spoken English sentence with words to practice',
+    caption: 'Get an accuracy score on every sentence',
+  },
+  {
+    src: '/images/screenshots/vaani-english-pronunciation-practice.jpg',
+    alt: 'English pronunciation practice in Vaani showing the word travel with IPA transcription, listen playback and accuracy tracking',
+    caption: 'Drill pronunciation word by word',
+  },
+];
+---
+
+<section id="screenshots" aria-labelledby="screenshots-heading" class="py-20 lg:py-28">
+  <div class="section-container">
+    <SectionHeading
+      id="screenshots-heading"
+      title="English Speaking Practice, Inside the App"
+      description="Real conversations, instant feedback, and pronunciation drills — here’s what practicing with Vaani looks like"
+    />
+    <ul class="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mt-16 max-w-5xl mx-auto">
+      {screenshots.map((shot, i) => (
+        <li class="flex flex-col items-center gap-4">
+          <img
+            src={shot.src}
+            alt={shot.alt}
+            width="236"
+            height="512"
+            loading={i < 2 ? 'eager' : 'lazy'}
+            class="rounded-2xl border border-dark-border shadow-[0_8px_40px_rgba(0,0,0,0.5)] w-full max-w-[220px] hover:-translate-y-1 transition-transform duration-300"
+          />
+          <p class="text-text-secondary text-sm text-center leading-snug">{shot.caption}</p>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>

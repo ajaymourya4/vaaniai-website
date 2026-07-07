@@ -8,16 +8,22 @@ const height = size === 'large' ? 'h-[56px]' : 'h-[44px]';
 ---
 
 <div class="flex flex-col sm:flex-row items-center gap-3">
-  <a href="https://play.google.com/store/apps/details?id=app.vaaniai" target="_blank" rel="noopener noreferrer" aria-label="Download on the App Store" class:list={["inline-block transition-opacity hover:opacity-80", height]}>
+  <button
+    type="button"
+    data-ios-coming-soon
+    aria-haspopup="dialog"
+    aria-label="Vaani for iPhone — coming soon on the App Store"
+    class:list={["inline-block transition-opacity hover:opacity-80 cursor-pointer", height]}
+  >
     <img
       src="/images/app-store-badge.svg"
-      alt="Download on the App Store"
+      alt="Download on the App Store — coming soon"
       width="120"
       height="40"
       class="h-full w-auto"
       loading="eager"
     />
-  </a>
+  </button>
   <a href="https://play.google.com/store/apps/details?id=app.vaaniai" target="_blank" rel="noopener noreferrer" aria-label="Get it on Google Play" class:list={["inline-block transition-opacity hover:opacity-80", height]}>
     <img
       src="/images/google-play-badge.png"
@@ -29,3 +35,61 @@ const height = size === 'large' ? 'h-[56px]' : 'h-[44px]';
     />
   </a>
 </div>
+
+<script>
+  // One shared dialog per page, injected on first load (this hoisted script
+  // runs once even when the component is rendered multiple times).
+  const DIALOG_ID = 'ios-coming-soon-dialog';
+
+  function ensureDialog(): HTMLDialogElement {
+    let dialog = document.getElementById(DIALOG_ID) as HTMLDialogElement | null;
+    if (dialog) return dialog;
+
+    dialog = document.createElement('dialog');
+    dialog.id = DIALOG_ID;
+    dialog.setAttribute('aria-labelledby', `${DIALOG_ID}-title`);
+    dialog.className =
+      'bg-dark-card border border-dark-border rounded-2xl p-8 text-center text-text-primary max-w-sm w-full';
+    dialog.innerHTML = `
+      <p class="text-4xl" aria-hidden="true">🍎</p>
+      <h2 id="${DIALOG_ID}-title" class="text-xl font-bold mt-4">Coming soon on iOS</h2>
+      <p class="text-text-secondary text-sm mt-3 leading-relaxed">
+        Vaani for iPhone is on its way. In the meantime, you can practice
+        English speaking with Vaani on Android.
+      </p>
+      <a
+        href="https://play.google.com/store/apps/details?id=app.vaaniai"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Get it on Google Play"
+        class="inline-block mt-6 h-[44px] transition-opacity hover:opacity-80"
+      >
+        <img src="/images/google-play-badge.png" alt="Get it on Google Play" width="564" height="168" class="h-full w-auto" loading="lazy" />
+      </a>
+      <div class="mt-6">
+        <button
+          type="button"
+          data-dialog-close
+          class="inline-flex items-center px-5 py-2 rounded-lg bg-gradient-to-r from-accent-purple to-accent-blue text-white text-sm font-semibold transition-opacity hover:opacity-90 cursor-pointer"
+        >
+          Got it
+        </button>
+      </div>
+    `;
+    // Close when clicking the backdrop (outside the dialog panel).
+    dialog.addEventListener('click', (e) => {
+      if (e.target === dialog) dialog!.close();
+    });
+    document.body.appendChild(dialog);
+    return dialog;
+  }
+
+  document.addEventListener('click', (e) => {
+    const target = e.target as HTMLElement;
+    if (target.closest('[data-ios-coming-soon]')) {
+      ensureDialog().showModal();
+    } else if (target.closest('[data-dialog-close]')) {
+      (document.getElementById(DIALOG_ID) as HTMLDialogElement | null)?.close();
+    }
+  });
+</script>

@@ -1,0 +1,849 @@
+// Guide content for /guides/* pages. One guide per target keyword — see app.md
+// for the keyword research behind these. Every claim about the app must be
+// supported by the Play Store listing or screenshots (no invented features).
+
+export type GuideBlock =
+  | { type: 'p'; text: string }
+  | { type: 'list'; items: string[] }
+  | { type: 'steps'; items: { title: string; text: string }[] };
+
+export interface GuideSection {
+  heading: string;
+  blocks: GuideBlock[];
+}
+
+export interface Guide {
+  slug: string;
+  keyword: string;
+  metaTitle: string;
+  metaDescription: string;
+  title: string;
+  intro: string;
+  sections: GuideSection[];
+  vaani: {
+    heading: string;
+    intro: string;
+    steps: string[];
+    screenshot: { src: string; alt: string };
+  };
+  faqs: { question: string; answer: string }[];
+  related: string[];
+}
+
+export const guides: Guide[] = [
+  {
+    slug: 'how-to-speak-english-fluently',
+    keyword: 'how to speak english fluently',
+    metaTitle: 'How to Speak English Fluently: 10 Steps That Work | Vaani',
+    metaDescription:
+      'Learn how to speak English fluently with 10 practical steps: daily speaking practice, thinking in English, instant feedback, and a routine you can stick to.',
+    title: 'How to Speak English Fluently: 10 Steps That Actually Work',
+    intro:
+      'To speak English fluently, you need to speak — out loud, every day — not study more grammar. Fluency is a physical skill like swimming: it is built through repetitions of real conversation, quick feedback on your mistakes, and gradually thinking in English instead of translating. Here is a step-by-step plan that works even if you have nobody to practice with.',
+    sections: [
+      {
+        heading: 'Why you understand English but still can’t speak it',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Most learners have years of passive English — reading, listening, watching movies — but very few hours of active speaking. Understanding and speaking are stored as different skills in your brain. Reading another grammar book strengthens the skill you already have; only speaking builds the one you are missing. That is why someone who scores well on written tests can still freeze in a real conversation.',
+          },
+        ],
+      },
+      {
+        heading: '10 steps to become fluent in English',
+        blocks: [
+          {
+            type: 'steps',
+            items: [
+              {
+                title: 'Speak out loud every day, even alone',
+                text: 'Ten to twenty minutes of daily speaking beats a two-hour class once a week. Narrate what you are doing, describe your day, or talk with an AI conversation partner. The muscle memory of forming English sentences aloud is the foundation of fluency.',
+              },
+              {
+                title: 'Learn phrases, not isolated words',
+                text: 'Fluent speakers retrieve ready-made chunks — "I was wondering if…", "It turns out that…" — instead of assembling word by word. Collect full phrases from conversations and reuse them.',
+              },
+              {
+                title: 'Stop translating in your head',
+                text: 'Translating from your native language is the biggest cause of hesitation. Practice thinking directly in English: name objects around you, plan your day in English, and keep sentences short so you don’t need to translate.',
+              },
+              {
+                title: 'Get feedback on every mistake — fast',
+                text: 'Mistakes you never notice become permanent habits. The fastest improvers get corrections immediately after speaking, while the sentence is still fresh in memory.',
+              },
+              {
+                title: 'Practice real-life scenarios, not textbook dialogues',
+                text: 'Rehearse the conversations you will actually have: job interviews, ordering food, small talk with colleagues, travel situations. Scenario practice transfers directly to real life.',
+              },
+              {
+                title: 'Shadow native speakers',
+                text: 'Listen to a sentence and repeat it immediately, copying the rhythm, stress, and intonation. Shadowing trains your mouth and your ear at the same time.',
+              },
+              {
+                title: 'Record yourself and listen back',
+                text: 'You cannot fix what you cannot hear. Recording reveals the gap between how you think you sound and how you actually sound — and shows your progress over weeks.',
+              },
+              {
+                title: 'Accept mistakes as the method, not the enemy',
+                text: 'Fluency is not perfection. Native speakers make grammar slips constantly. Every mistake you make and correct in practice is one you won’t make in the moment that matters.',
+              },
+              {
+                title: 'Make it easy to show up',
+                text: 'The best practice method is the one you actually do. Remove friction: no scheduling, no partner coordination, no commute. If you can practice from your phone in five spare minutes, you will practice far more often.',
+              },
+              {
+                title: 'Track your progress',
+                text: 'Fluency grows too slowly to feel day-to-day. Accuracy scores, streaks, and a list of words you’ve mastered make progress visible and keep you motivated through the plateau.',
+              },
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'How long does it take to speak English fluently?',
+        blocks: [
+          {
+            type: 'p',
+            text: 'With consistent daily speaking practice, most learners feel a clear difference in 4–6 weeks: less hesitation, faster sentence formation, more confidence in familiar topics. Conversational comfort in most everyday situations typically takes 3–6 months. The variable that matters most is not talent or living abroad — it is how many minutes per week you actually spend speaking.',
+          },
+        ],
+      },
+    ],
+    vaani: {
+      heading: 'How to build fluency with Vaani',
+      intro:
+        'Vaani is an AI English speaking coach built around exactly this loop: speak in real scenarios, get corrected instantly, and repeat — with zero judgment and no scheduling.',
+      steps: [
+        'Open the Practice Hub and pick a topic you’ll actually use — Travel, Work & Career, Daily Life, Food & Cooking, and more.',
+        'Hold to speak and have a real voice conversation with your AI English teacher. It responds naturally and keeps the conversation going.',
+        'After each sentence, see your accuracy score and instant corrections for grammar, pronunciation, and word choice — then try the sentence again.',
+        'Drill the specific words you missed in Words to Practice, with the correct pronunciation to listen to and imitate.',
+        'Come back daily — Vaani is available 24/7, so your practice never depends on anyone else’s schedule.',
+      ],
+      screenshot: {
+        src: '/images/screenshots/vaani-instant-grammar-feedback-accuracy.jpg',
+        alt: 'Vaani app showing 93% accuracy score with instant feedback on a spoken English sentence and words to practice',
+      },
+    },
+    faqs: [
+      {
+        question: 'Can I become fluent in English without living abroad?',
+        answer:
+          'Yes. Immersion helps because it forces daily speaking, but you can recreate that at home: speak English out loud every day, consume English media, and use an AI conversation partner for unlimited real conversations. Consistency matters far more than location.',
+      },
+      {
+        question: 'Should I finish grammar first before I start speaking?',
+        answer:
+          'No — this is the most common trap. If you can form basic sentences, you know enough grammar to start speaking. You will learn the remaining grammar much faster through corrections in real conversation than through more study.',
+      },
+      {
+        question: 'How many minutes a day should I practice speaking English?',
+        answer:
+          'Ten to twenty minutes of focused, out-loud speaking per day is enough to make visible progress within weeks. Short daily sessions beat long weekly ones because fluency depends on frequency of retrieval, not total hours.',
+      },
+    ],
+    related: ['daily-english-speaking-practice', 'practice-english-speaking-at-home', 'speak-english-confidently-without-fear'],
+  },
+
+  {
+    slug: 'practice-english-speaking-at-home',
+    keyword: 'practice english speaking at home',
+    metaTitle: 'Practice English Speaking at Home Alone: 7 Ways | Vaani',
+    metaDescription:
+      'No speaking partner? Learn 7 effective ways to practice English speaking at home alone — self-talk, shadowing, recording, and AI conversation practice.',
+    title: 'How to Practice English Speaking at Home — Alone, Without a Partner',
+    intro:
+      'You can absolutely practice English speaking at home without a partner. The most effective methods are speaking to yourself out loud, shadowing native audio, recording and reviewing your own speech, and having voice conversations with an AI coach that talks back and corrects you. Here is how to combine them into a practice system.',
+    sections: [
+      {
+        heading: 'Why "I have nobody to practice with" doesn’t have to stop you',
+        blocks: [
+          {
+            type: 'p',
+            text: 'The old advice — "find a native speaker to talk to" — is impractical for most learners. Language partners cancel, tutors are expensive, and speaking clubs meet once a week at best. Meanwhile, your speaking skill needs daily repetitions. The good news: what builds fluency is your mouth producing English and your brain getting feedback. Both of those are now possible alone, at home, for free.',
+          },
+        ],
+      },
+      {
+        heading: '7 ways to practice speaking English by yourself',
+        blocks: [
+          {
+            type: 'steps',
+            items: [
+              {
+                title: 'Narrate your life',
+                text: 'Describe what you are doing as you do it: "I’m making tea. The water is boiling. I forgot to buy milk." It feels odd for a day or two, then becomes the easiest zero-cost practice there is.',
+              },
+              {
+                title: 'Shadow native speakers',
+                text: 'Play a short clip — a podcast, a series, a YouTube video — and repeat each sentence immediately after you hear it, copying the intonation. Ten minutes of shadowing daily noticeably improves rhythm and pronunciation.',
+              },
+              {
+                title: 'Record yourself answering questions',
+                text: 'Pick a common question ("Tell me about your city"), answer for one minute on your phone’s recorder, then listen back. Note hesitations and repeated mistakes, and answer again.',
+              },
+              {
+                title: 'Think in English on a schedule',
+                text: 'Set two daily moments — your commute, your walk — where you deliberately think in English. This attacks the translation habit that causes hesitation.',
+              },
+              {
+                title: 'Read aloud for five minutes',
+                text: 'Reading aloud trains pronunciation and sentence flow without requiring you to invent content. News articles and simple fiction work well.',
+              },
+              {
+                title: 'Talk to an AI conversation partner',
+                text: 'This is the piece the other methods can’t give you: a real back-and-forth conversation with follow-up questions, plus corrections. AI speaking apps let you converse out loud any time, with no judgment and no scheduling.',
+              },
+              {
+                title: 'Rehearse tomorrow’s conversations',
+                text: 'Have a meeting, a call, or an appointment coming up? Say your part out loud tonight. Rehearsed sentences come out smoothly under pressure.',
+              },
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'The missing ingredient when you practice alone: feedback',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Self-talk and shadowing build volume, but they share one weakness — nobody tells you what you got wrong. Practicing errors cements them. That is why the highest-value addition to at-home practice is a feedback source: something that hears your English and corrects your grammar, pronunciation, and word choice immediately. This used to require a tutor; now an AI coach does it on every single sentence.',
+          },
+        ],
+      },
+    ],
+    vaani: {
+      heading: 'How to practice at home with Vaani',
+      intro:
+        'Vaani turns your phone into a speaking partner that is always available, never judges, and corrects every sentence — the exact things solo practice is missing.',
+      steps: [
+        'Pick a topic in the Practice Hub — start with Daily Life if you’re not sure — or choose Role Play for scenario practice.',
+        'Hold to speak and answer naturally. The AI teacher asks follow-up questions, exactly like a real conversation partner.',
+        'Watch your accuracy score after each response and read the instant corrections — mistakes are fixed while the sentence is still fresh.',
+        'Add tricky words to your practice list and drill them with the Listen-and-repeat pronunciation tool.',
+        'Practice at any hour — before work, during lunch, at midnight. No partner, no appointment, no pressure.',
+      ],
+      screenshot: {
+        src: '/images/screenshots/vaani-practice-hub-english-speaking-topics.jpg',
+        alt: 'Vaani Practice Hub with English speaking topics: Travel, Work and Career, Food and Cooking, Movies, Health and Daily Life',
+      },
+    },
+    faqs: [
+      {
+        question: 'Can I really improve English speaking without a partner?',
+        answer:
+          'Yes. What improves speaking is producing English out loud and getting feedback on it. Self-talk, shadowing, and recording give you the production; an AI conversation coach adds the real dialogue and the corrections a partner would provide — without the scheduling.',
+      },
+      {
+        question: 'I feel silly talking to myself in English. Is that normal?',
+        answer:
+          'Completely normal, and it passes within a few days. If self-talk feels too strange, start by reading aloud or talking with an AI coach instead — having a "listener" that responds makes speaking out loud feel natural immediately.',
+      },
+      {
+        question: 'How much time at home do I need per day?',
+        answer:
+          'Fifteen minutes is enough if it is actual speaking: two minutes of warm-up self-talk, ten minutes of conversation practice, and a few minutes drilling the words you got wrong.',
+      },
+    ],
+    related: ['daily-english-speaking-practice', 'practice-english-speaking-with-ai', 'how-to-speak-english-fluently'],
+  },
+
+  {
+    slug: 'english-speaking-practice-for-job-interviews',
+    keyword: 'english speaking practice for job interviews',
+    metaTitle: 'English Speaking Practice for Job Interviews | Vaani',
+    metaDescription:
+      'Prepare to interview in English: the questions to rehearse, how to practice answers aloud, and how to run AI mock interviews until you stop freezing.',
+    title: 'English Speaking Practice for Job Interviews: How to Prepare',
+    intro:
+      'The way to stop freezing in English job interviews is to rehearse out loud — not to write better notes. Practice answering the questions you will actually be asked, speak your answers repeatedly until they flow, and get feedback on grammar and pronunciation so small errors don’t undermine your confidence. Here is a preparation plan you can run in the days before your interview.',
+    sections: [
+      {
+        heading: 'Why interviews make your English disappear',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Under pressure, your brain prioritizes the content of your answer — and your English, the less automatic skill, collapses first. Candidates who "know English" stumble in interviews because they have never produced professional English out loud under time pressure. The fix is rehearsal: answers you have spoken ten times come out smoothly even when you are nervous, because they no longer require conscious assembly.',
+          },
+        ],
+      },
+      {
+        heading: 'The questions to rehearse first',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Interviews are more predictable than they feel. Prepare spoken — not written — answers to these, and you have covered most of a typical interview:',
+          },
+          {
+            type: 'list',
+            items: [
+              '"Tell me about yourself" — a 60–90 second spoken introduction; this sets the tone for everything after.',
+              '"Why do you want this role / why should we hire you?"',
+              '"What are your strengths and weaknesses?"',
+              '"Tell me about a challenge you faced and how you handled it" — use a simple Situation → Action → Result structure.',
+              '"Where do you see yourself in five years?"',
+              '"Do you have any questions for us?" — prepare two questions of your own.',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'A 5-day speaking practice plan before the interview',
+        blocks: [
+          {
+            type: 'steps',
+            items: [
+              {
+                title: 'Day 1 — Draft your stories out loud',
+                text: 'Don’t write scripts. Speak each answer freely three times; it will tighten naturally. Scripts memorized word-for-word crack under pressure — spoken outlines don’t.',
+              },
+              {
+                title: 'Day 2 — Fix the language',
+                text: 'Practice your answers with a feedback source and clean up recurring grammar mistakes and mispronounced words — especially job-specific vocabulary you’ll definitely need.',
+              },
+              {
+                title: 'Day 3 — Run a full mock interview',
+                text: 'Simulate the real thing end-to-end: unpredictable question order, follow-up questions, no pausing. This is where role-play practice with an AI interviewer shines.',
+              },
+              {
+                title: 'Day 4 — Drill your weak spots',
+                text: 'Re-run only the questions that went badly. Drill mispronounced words individually until they are automatic.',
+              },
+              {
+                title: 'Day 5 — Light rehearsal and rest',
+                text: 'One relaxed run-through of "tell me about yourself" and your two hardest questions. Confidence on the day comes from knowing you’ve already done this conversation before.',
+              },
+            ],
+          },
+        ],
+      },
+    ],
+    vaani: {
+      heading: 'How to run mock interviews with Vaani',
+      intro:
+        'Vaani’s Role Play mode and Work & Career topic let you rehearse interview English in a real back-and-forth voice conversation — with corrections after every answer, and none of the embarrassment of practicing in front of a person.',
+      steps: [
+        'Open the Practice Hub, switch to Role Play, and choose an interview scenario — or pick the Work & Career topic for professional conversation practice.',
+        'Answer the AI interviewer’s questions out loud using hold-to-speak, including unexpected follow-ups — just like a real interview.',
+        'Review your accuracy score and instant corrections after each answer: grammar slips, mispronounced words, and stronger word choices.',
+        'Drill the specific words that tripped you up — say your key vocabulary (your job title, your skills) until the accuracy score shows they’re clean.',
+        'Repeat the scenario daily before your interview. Each run gets measurably smoother, and you walk in having already survived the conversation many times.',
+      ],
+      screenshot: {
+        src: '/images/screenshots/vaani-ai-english-conversation-practice.jpg',
+        alt: 'Practicing a spoken English conversation with Vaani’s AI teacher with voice replies and follow-up questions',
+      },
+    },
+    faqs: [
+      {
+        question: 'How do I stop freezing when interviewing in English?',
+        answer:
+          'Freezing happens when you compose answers from scratch under pressure. Rehearse your core answers out loud until they are semi-automatic, and simulate the interview several times before the real one. Familiarity, not more vocabulary, is what removes the freeze.',
+      },
+      {
+        question: 'Do small grammar mistakes matter in a job interview?',
+        answer:
+          'Less than most candidates fear. Interviewers care about clarity and confidence far more than perfect grammar. That said, cleaning up repeated errors in practice is worth it — not for the interviewer, but because knowing your English is solid removes a major source of nervousness.',
+      },
+      {
+        question: 'How many days before an interview should I start practicing?',
+        answer:
+          'Five days of 15–20 minute daily sessions is a solid runway for the language side. If you have less time, prioritize speaking "tell me about yourself" out loud repeatedly and one full mock-interview run.',
+      },
+    ],
+    related: ['speak-english-confidently-without-fear', 'improve-english-pronunciation', 'how-to-speak-english-fluently'],
+  },
+
+  {
+    slug: 'improve-english-pronunciation',
+    keyword: 'how to improve english pronunciation',
+    metaTitle: 'How to Improve English Pronunciation: Daily Exercises | Vaani',
+    metaDescription:
+      'Improve your English pronunciation with a listen–imitate–feedback loop: shadowing, minimal pairs, word-level drills, and instant accuracy scoring.',
+    title: 'How to Improve English Pronunciation: Exercises That Actually Work',
+    intro:
+      'The fastest way to improve English pronunciation is a tight loop of listen → imitate → get feedback → repeat. Hear the correct model of a word, say it, find out exactly how close you were, and drill the specific sounds you miss. Generic "listen to more English" advice fails because without feedback you can’t hear your own errors. Here are the exercises that work.',
+    sections: [
+      {
+        heading: 'Why you can’t hear your own pronunciation mistakes',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Your brain filters speech through the sound system of your native language. If your language doesn’t distinguish two English sounds — like "ship" and "sheep", or the two th-sounds — you literally hear them as the same, so you can’t self-correct. This is why feedback is not optional for pronunciation: something outside your own ear has to tell you when the sound you produced doesn’t match the target.',
+          },
+        ],
+      },
+      {
+        heading: '6 pronunciation exercises that work',
+        blocks: [
+          {
+            type: 'steps',
+            items: [
+              {
+                title: 'Shadowing',
+                text: 'Repeat sentences immediately after a native speaker, copying stress and melody, not just sounds. English is rhythm-based — getting the stress right often matters more for being understood than perfecting individual sounds.',
+              },
+              {
+                title: 'Word-level drilling with a model',
+                text: 'For each problem word: listen to the correct pronunciation, say it, compare, repeat. Doing this with instant accuracy feedback turns guesswork into measurable progress.',
+              },
+              {
+                title: 'Minimal pairs',
+                text: 'Practice word pairs that differ by one sound — ship/sheep, bat/bet, pray/play — to train your ear and mouth on the exact contrasts your native language lacks.',
+              },
+              {
+                title: 'Learn basic IPA for your problem words',
+                text: 'The phonetic spelling (like /ˈtrævəl/ for "travel") shows you the actual sounds, bypassing English’s misleading spelling. You only need the dozen symbols that appear in your problem words.',
+              },
+              {
+                title: 'Slow down and exaggerate',
+                text: 'Practicing a sound slowly and exaggerated builds the mouth positions correctly; speed comes back on its own. Mumbling through at full speed just rehearses the error.',
+              },
+              {
+                title: 'Record and compare weekly',
+                text: 'Record the same paragraph once a week. Progress you can hear is the best motivation to keep drilling.',
+              },
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Focus on being understood, not sounding native',
+        blocks: [
+          {
+            type: 'p',
+            text: 'A useful target is clear, confident English with your own accent — not a perfect American or British accent. Prioritize the errors that cause misunderstanding: word stress, key vowel contrasts, and consistently mispronounced everyday words. Fixing your twenty most-used problem words improves how you sound more than months of generic accent work.',
+          },
+        ],
+      },
+    ],
+    vaani: {
+      heading: 'How to drill pronunciation with Vaani',
+      intro:
+        'Vaani gives you the feedback loop that solo pronunciation practice lacks: it scores every spoken sentence, highlights the exact words you mispronounced, and turns them into personal drills.',
+      steps: [
+        'Have a normal voice conversation in any topic — Vaani listens to every sentence you speak.',
+        'See your accuracy score instantly, with mispronounced words highlighted right in your sentence.',
+        'Tap a highlighted word to open Practice mode: see its IPA (like /ˈtrævəl/), tap Listen to hear the correct model, then hold to speak and imitate it.',
+        'Watch your per-word accuracy climb as you repeat — the score tells you precisely when you’ve got it.',
+        'Your missed words collect in Words to Practice, so every session builds a personal drill list of exactly the sounds you need.',
+      ],
+      screenshot: {
+        src: '/images/screenshots/vaani-english-pronunciation-practice.jpg',
+        alt: 'Vaani pronunciation practice screen showing the word travel with IPA transcription, listen button and accuracy score',
+      },
+    },
+    faqs: [
+      {
+        question: 'Can adults still improve their English pronunciation?',
+        answer:
+          'Yes. Adults rarely reach a perfectly native accent, but clarity — being effortlessly understood — is very trainable at any age with targeted drilling and feedback. Most learners hear a clear difference within a few weeks of daily word-level practice.',
+      },
+      {
+        question: 'Do I need to learn the full IPA phonetic alphabet?',
+        answer:
+          'No. Learn the handful of symbols that appear in your problem words — usually the vowels. IPA is a tool for seeing sounds that English spelling hides, not a subject to master.',
+      },
+      {
+        question: 'Why do people still ask me to repeat myself?',
+        answer:
+          'Usually it’s word stress rather than individual sounds — saying deVELopment as DEvelopment breaks recognition for listeners. Drill the stress pattern of your common words and comprehension problems drop sharply.',
+      },
+    ],
+    related: ['how-to-speak-english-fluently', 'daily-english-speaking-practice', 'practice-english-speaking-with-ai'],
+  },
+
+  {
+    slug: 'speak-english-confidently-without-fear',
+    keyword: 'how to speak english confidently',
+    metaTitle: 'Speak English Confidently: Overcome Fear & Hesitation | Vaani',
+    metaDescription:
+      'Know English but hesitate to speak? Learn why the fear happens and a step-by-step method to overcome hesitation and speak English with confidence.',
+    title: 'How to Speak English Confidently — and Overcome Fear and Hesitation',
+    intro:
+      'If you understand English but hesitate to speak it, your problem is not knowledge — it is confidence, and confidence is trainable. The fix is safe repetitions: speaking regularly in a judgment-free setting, making mistakes cheaply, and correcting them, until English stops feeling like a performance. Here is how to break the hesitation loop step by step.',
+    sections: [
+      {
+        heading: 'Why you hesitate even though you know English',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Hesitation is a loop: you fear making a mistake in front of people → you avoid speaking → you get no speaking practice → your spoken English stays shaky → which confirms the fear. Grammar study cannot break this loop, because the bottleneck was never grammar. Many learners also translate silently from their native language before speaking, which adds a delay that feels like — and gets judged as — not knowing English.',
+          },
+        ],
+      },
+      {
+        heading: '7 steps to build English speaking confidence',
+        blocks: [
+          {
+            type: 'steps',
+            items: [
+              {
+                title: 'Start where mistakes are free',
+                text: 'Confidence grows fastest where the cost of an error is zero. Practice out loud alone or with an AI coach first — no audience, no judgment — and save real-world conversations for when the basics feel automatic.',
+              },
+              {
+                title: 'Lower the bar deliberately',
+                text: 'Aim for "clear and simple", not "impressive". Short sentences you can say fluently build more confidence than long ones you stumble through.',
+              },
+              {
+                title: 'Get corrections privately',
+                text: 'Being corrected in front of others is what made speaking scary in the first place. Private, instant feedback fixes your errors without the social sting — so correction starts feeling like progress, not embarrassment.',
+              },
+              {
+                title: 'Rehearse high-stakes moments in advance',
+                text: 'Meetings, interviews, phone calls: practice the actual conversation out loud beforehand. Walking in with rehearsed openings removes the scariest part — the start.',
+              },
+              {
+                title: 'Kill the translation habit',
+                text: 'Practice thinking in English daily. When you speak directly from thought to English, the hesitation gap that reads as "nervousness" disappears.',
+              },
+              {
+                title: 'Collect small wins on purpose',
+                text: 'One smooth conversation, one question asked in a meeting, one accuracy score improving week over week — logged wins rewire your self-image from "bad at speaking" to "improving fast".',
+              },
+              {
+                title: 'Expose yourself gradually',
+                text: 'Once solo practice feels easy, add mild stakes: a coffee order, small talk with a colleague, a longer comment in a meeting. Each level makes the next one feel normal.',
+              },
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'How long until speaking feels comfortable?',
+        blocks: [
+          {
+            type: 'p',
+            text: 'With daily practice, most learners feel noticeably less hesitation in 4–6 weeks, and comfortable in most everyday situations within 3–6 months. The mechanism is simple: hesitation shrinks in direct proportion to the number of low-pressure conversations you have had. Every safe rep makes the next real conversation less scary.',
+          },
+        ],
+      },
+    ],
+    vaani: {
+      heading: 'How Vaani helps you speak without fear',
+      intro:
+        'Vaani was built for exactly this user — the person who understands English but feels nervous or stuck while speaking. It is a practice space where mistakes cost nothing and every session ends with visible progress.',
+      steps: [
+        'Practice with an AI coach that never judges, never laughs, and never gets impatient — the pressure that blocks you with people simply isn’t there.',
+        'Speak in everyday topics from the Practice Hub (Daily Life, Travel, Food) so you rehearse the exact situations that currently make you nervous.',
+        'Get corrections instantly and privately after each sentence — grammar, pronunciation, and better phrasing — and try again immediately.',
+        'Watch your accuracy scores rise session over session: objective proof that you are improving, which is what real confidence is built on.',
+        'Practice anytime, 24/7 — five judgment-free minutes before a meeting can settle your nerves and warm up your English.',
+      ],
+      screenshot: {
+        src: '/images/screenshots/vaani-ai-english-conversation-practice.jpg',
+        alt: 'A judgment-free English conversation practice session with Vaani’s AI English teacher',
+      },
+    },
+    faqs: [
+      {
+        question: 'Why do I freeze when speaking English even though I understand it well?',
+        answer:
+          'Understanding and speaking are separate skills, and fear suppresses the weaker one. Freezing means you have far more passive practice (listening, reading) than active practice (speaking under mild pressure). Safe, regular speaking reps — not more study — are the cure.',
+      },
+      {
+        question: 'How do I stop translating from my native language in my head?',
+        answer:
+          'Shrink your sentences until translation is unnecessary, and practice thinking in English during daily routines. In conversation practice, prioritize responding quickly with simple English over slowly with perfect English — speed of retrieval is the skill you are training.',
+      },
+      {
+        question: 'Is it embarrassing to practice speaking with an AI?',
+        answer:
+          'It’s the opposite — the absence of embarrassment is the point. An AI coach gives you the conversation practice and corrections of a human partner with none of the social fear, which makes it the ideal first stage before real-world conversations.',
+      },
+    ],
+    related: ['practice-english-speaking-at-home', 'english-speaking-practice-for-job-interviews', 'how-to-speak-english-fluently'],
+  },
+
+  {
+    slug: 'english-conversation-practice-online',
+    keyword: 'english conversation practice online',
+    metaTitle: 'English Conversation Practice Online: Start Today | Vaani',
+    metaDescription:
+      'Compare the best ways to practice English conversation online — tutors, language exchanges, and AI speaking apps — and start a real conversation in minutes.',
+    title: 'English Conversation Practice Online: How to Start Today',
+    intro:
+      'You can practice English conversation online in three main ways: booking a tutor, finding a language-exchange partner, or talking with an AI conversation app. Each has trade-offs in cost, availability, and feedback quality — but only one of them lets you start a real spoken conversation in the next two minutes. Here is how they compare and how to get the most from your practice.',
+    sections: [
+      {
+        heading: 'Your options for online conversation practice, compared',
+        blocks: [
+          {
+            type: 'steps',
+            items: [
+              {
+                title: 'Online tutors',
+                text: 'Real human conversation and expert correction, but $10–40 per hour, requires booking ahead, and most learners ration it to once or twice a week — far below the daily frequency fluency needs.',
+              },
+              {
+                title: 'Language exchange partners',
+                text: 'Free and social, but half of every session is you helping them with your language, partners cancel often, and untrained partners rarely correct your mistakes — pleasant conversation, weak feedback.',
+              },
+              {
+                title: 'AI conversation apps',
+                text: 'Real voice conversations, available 24/7, no scheduling, no judgment, and instant correction of grammar and pronunciation on every sentence. The conversation partner is not human — which for nervous speakers is usually an advantage, not a drawback.',
+              },
+              {
+                title: 'The practical answer: combine them',
+                text: 'Use AI conversation for your daily reps and feedback, and add human conversation (a tutor session or exchange) once a week if you can. Daily volume from AI + occasional human variety is the strongest combination.',
+              },
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'What makes conversation practice actually effective',
+        blocks: [
+          {
+            type: 'list',
+            items: [
+              'You speak at least half the time — listening to a tutor talk is not speaking practice.',
+              'The topics match your real life: work, travel, daily situations — so the vocabulary transfers.',
+              'You get specific corrections, not just "good job!" — otherwise errors fossilize.',
+              'The conversation pushes you slightly: follow-up questions, new words, unexpected turns.',
+              'It happens at conversation speed — pausing to look things up trains translation, not fluency.',
+            ],
+          },
+        ],
+      },
+    ],
+    vaani: {
+      heading: 'Start practicing conversation online with Vaani',
+      intro:
+        'Vaani gives you unlimited online conversation practice with an AI English teacher that speaks, listens, asks follow-up questions, and corrects you — from your phone, starting right now.',
+      steps: [
+        'Download Vaani and open the Practice Hub — no booking, no partner matching, no waiting.',
+        'Choose the conversation that matches your life: Travel, Work & Career, Food & Cooking, Movies & Entertainment, Health & Lifestyle, or Daily Life.',
+        'Talk naturally using hold-to-speak. The AI responds like a real conversation partner and keeps the discussion flowing with questions.',
+        'Get instant feedback on every sentence — accuracy score, grammar fixes, and better word suggestions — so each conversation makes you measurably better.',
+        'Practice daily, free to start. Ten minutes a day of real conversation beats a weekly class.',
+      ],
+      screenshot: {
+        src: '/images/screenshots/vaani-practice-hub-english-speaking-topics.jpg',
+        alt: 'Choosing an online English conversation practice topic in the Vaani app Practice Hub',
+      },
+    },
+    faqs: [
+      {
+        question: 'Is online English conversation practice as effective as in-person?',
+        answer:
+          'For building fluency, yes — what matters is minutes spent speaking and the quality of feedback, not the room you are in. Online practice usually wins in practice because it happens more often: no commute, no scheduling, available whenever you have ten free minutes.',
+      },
+      {
+        question: 'Can I practice English conversation online for free?',
+        answer:
+          'Yes. Language exchanges are free but give weak feedback, and AI conversation apps like Vaani are free to start — you get real spoken conversations with instant corrections without paying tutor rates.',
+      },
+      {
+        question: 'How often should I do conversation practice?',
+        answer:
+          'Daily short sessions beat weekly long ones. Ten to fifteen minutes of real conversation every day produces visible improvement within a month, because fluency is built on frequency of speaking, not total session length.',
+      },
+    ],
+    related: ['practice-english-speaking-with-ai', 'daily-english-speaking-practice', 'practice-english-speaking-at-home'],
+  },
+
+  {
+    slug: 'practice-english-speaking-with-ai',
+    keyword: 'practice english speaking with ai',
+    metaTitle: 'Practice English Speaking with AI: Complete Guide | Vaani',
+    metaDescription:
+      'Does AI English speaking practice work? How AI conversation coaches compare to tutors, what to look for in an app, and how to get fluent faster with AI.',
+    title: 'Practice English Speaking with AI: The Complete Guide',
+    intro:
+      'Practicing English speaking with AI works because it solves the three problems that stop most learners: no partner to practice with, fear of being judged, and no feedback on mistakes. A good AI speaking app gives you unlimited real voice conversations, corrects your grammar and pronunciation on every sentence, and is available whenever you are. Here is how to use AI practice well — and what to look for in an app.',
+    sections: [
+      {
+        heading: 'Why AI conversation practice works',
+        blocks: [
+          {
+            type: 'list',
+            items: [
+              'Unlimited repetitions: fluency needs daily speaking volume, and AI never runs out of patience or time.',
+              'Zero judgment: the fear of embarrassment that blocks you with humans simply isn’t there — so you speak more, and more freely.',
+              'Instant feedback on every sentence: AI catches and corrects mistakes in real time, while a human partner lets most of them slide.',
+              'Always available: practice at 6am or midnight, five minutes or an hour, without coordinating anyone’s calendar.',
+              'Infinitely patient scenario practice: rehearse the same job interview or travel conversation ten times — no human partner will do that with you.',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'What to look for in an AI English speaking app',
+        blocks: [
+          {
+            type: 'steps',
+            items: [
+              {
+                title: 'Voice-first, not chat-first',
+                text: 'Typing to an AI improves your writing. To improve speaking, the app must make you speak out loud and must respond to your actual voice.',
+              },
+              {
+                title: 'Real conversation, not scripted drills',
+                text: 'Repeating fixed sentences is pronunciation exercise, not conversation practice. Look for an AI that holds a genuine back-and-forth with follow-up questions.',
+              },
+              {
+                title: 'Specific, immediate feedback',
+                text: 'The app should tell you what was wrong in your sentence — grammar, word choice, pronunciation — right after you say it, with a measurable score so you can track improvement.',
+              },
+              {
+                title: 'Word-level pronunciation drilling',
+                text: 'Conversation shows you which words you miss; the app should let you drill exactly those words with a native audio model and accuracy scoring.',
+              },
+              {
+                title: 'Scenarios that match your life',
+                text: 'Practicing topics you’ll actually talk about — work, travel, daily life — means the phrases you learn get used, and stick.',
+              },
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'AI coach vs human tutor: which should you use?',
+        blocks: [
+          {
+            type: 'p',
+            text: 'It’s the wrong either/or. A human tutor offers cultural nuance and accountability, but costs $10–40 per session and caps your practice at your budget. An AI coach gives you the daily volume and per-sentence feedback that actually builds fluency, at a fraction of the cost. The strongest setup for most learners: AI conversation every day, and if budget allows, a human session occasionally for variety. If you must pick one, pick the one you’ll use daily — that is almost always the AI, because it’s in your pocket and always on.',
+          },
+        ],
+      },
+    ],
+    vaani: {
+      heading: 'How AI speaking practice works in Vaani',
+      intro:
+        'Vaani is a voice-first AI English coach that checks every box above: real conversations, instant per-sentence feedback, and word-level pronunciation drills.',
+      steps: [
+        'Pick a topic or Role Play scenario in the Practice Hub and start talking — Vaani’s AI teacher opens the conversation and keeps it flowing naturally.',
+        'Speak with hold-to-speak; the AI understands your voice, replies in context, and asks follow-up questions like a curious human partner.',
+        'After each sentence you get an accuracy score plus instant corrections — grammar mistakes fixed, mispronounced words highlighted, better phrases suggested.',
+        'Highlighted words go to Words to Practice, where you drill them with IPA, native audio, and per-word accuracy until they’re clean.',
+        'Practice 24/7, free to start — beginner to advanced, the AI adapts to your level and keeps the conversation supportive and encouraging.',
+      ],
+      screenshot: {
+        src: '/images/screenshots/vaani-instant-grammar-feedback-accuracy.jpg',
+        alt: 'Vaani AI showing instant feedback with 93% accuracy on a spoken English sentence and a word practice list',
+      },
+    },
+    faqs: [
+      {
+        question: 'Is practicing English with AI as good as with a human tutor?',
+        answer:
+          'For daily speaking volume and error correction, AI is often better — it’s available anytime, corrects every sentence, and costs far less. Humans still win on cultural nuance and accountability. Most effective learners use AI for daily practice and humans occasionally, if at all.',
+      },
+      {
+        question: 'Will an AI app understand my accent?',
+        answer:
+          'Modern speech recognition is trained on a wide range of accents and handles non-native English well. In Vaani, the accuracy score also becomes a useful signal: when the app understands you effortlessly, real people will too.',
+      },
+      {
+        question: 'Can beginners practice English speaking with AI?',
+        answer:
+          'Yes — AI practice is arguably best for beginners, because the fear of embarrassing yourself is removed entirely. Vaani adapts from beginner to advanced: conversations stay simple and encouraging until you’re ready for more.',
+      },
+    ],
+    related: ['english-conversation-practice-online', 'practice-english-speaking-at-home', 'improve-english-pronunciation'],
+  },
+
+  {
+    slug: 'daily-english-speaking-practice',
+    keyword: 'daily english speaking practice',
+    metaTitle: 'Daily English Speaking Practice: 15-Minute Routine | Vaani',
+    metaDescription:
+      'A realistic 15-minute daily English speaking practice routine: warm-up, real conversation, and pronunciation drills — plus how to actually stay consistent.',
+    title: 'Daily English Speaking Practice: A 15-Minute Routine That Sticks',
+    intro:
+      'The most effective daily English speaking practice is short, spoken, and structured: 2 minutes of warm-up self-talk, 10 minutes of real conversation, and 3 minutes drilling the words you got wrong. Fifteen minutes a day outperforms a two-hour weekly class because speaking fluency is built on frequency, not duration. Here is the routine, and how to make it a habit you keep.',
+    sections: [
+      {
+        heading: 'Why daily beats intense',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Speaking English draws on fast recall — words and structures surfacing in milliseconds. Recall strength decays between practice sessions, so seven short sessions a week keep your English "warm" while one long session lets it cool for six days in between. This is why learners who switch from a weekly class to daily 15-minute practice routinely feel more progress in a month than in the previous year.',
+          },
+        ],
+      },
+      {
+        heading: 'The 15-minute daily routine',
+        blocks: [
+          {
+            type: 'steps',
+            items: [
+              {
+                title: 'Minutes 1–2: Warm up out loud',
+                text: 'Say what you did today or plan to do, in English, out loud. This shifts your brain into English mode and costs nothing.',
+              },
+              {
+                title: 'Minutes 3–12: One real conversation',
+                text: 'Have an actual back-and-forth conversation — with an AI coach, a partner, or a tutor. Pick a topic tied to your life and aim to speak at least half the time. This block is where fluency is built; protect it.',
+              },
+              {
+                title: 'Minutes 13–15: Drill your misses',
+                text: 'Take the words or phrases you fumbled in the conversation and drill them: listen to the correct model, repeat until clean. Ending with focused correction converts today’s mistakes into tomorrow’s fluency.',
+              },
+              {
+                title: 'Weekly bonus: One review session',
+                text: 'Once a week, re-run your hardest recent scenario and compare how it feels. Visible progress is the fuel that keeps a daily habit alive.',
+              },
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'How to actually stay consistent',
+        blocks: [
+          {
+            type: 'list',
+            items: [
+              'Anchor practice to an existing habit: right after morning coffee, or during the commute.',
+              'Make it frictionless: practice from your phone, so "no partner / no time / not at my desk" can’t become excuses.',
+              'Never miss twice: skipping one day is noise, skipping two starts a new habit of not practicing.',
+              'Track something visible: accuracy scores or a streak — progress you can see is the strongest motivator to continue.',
+              'Keep sessions short on bad days: a 5-minute conversation on a busy day preserves the habit; perfectionism kills it.',
+            ],
+          },
+        ],
+      },
+    ],
+    vaani: {
+      heading: 'Run your daily routine in Vaani',
+      intro:
+        'Vaani is built for exactly this kind of daily practice: conversations start in seconds, feedback is instant, and your weak words are collected for you — the whole routine lives in one app.',
+      steps: [
+        'Open Vaani and start your 10-minute conversation immediately — pick a different Practice Hub topic each day (Daily Life Monday, Work & Career Tuesday, Travel Wednesday…) to keep vocabulary broad.',
+        'Speak freely with hold-to-speak; the AI teacher keeps the conversation going, so your 10 minutes are pure speaking practice.',
+        'Finish with Words to Practice: your mispronounced words from today’s session are already collected — drill each one with Listen and repeat until the accuracy score is green.',
+        'Because Vaani is available 24/7, your routine survives busy days: five minutes at midnight still counts.',
+        'Watch your accuracy trend upward across sessions — the visible progress that makes the habit self-sustaining.',
+      ],
+      screenshot: {
+        src: '/images/screenshots/vaani-practice-hub-english-speaking-topics.jpg',
+        alt: 'Vaani Practice Hub topics for daily English speaking practice across travel, work, food and everyday life',
+      },
+    },
+    faqs: [
+      {
+        question: 'How many minutes of English speaking practice per day is enough?',
+        answer:
+          'Fifteen minutes of actual out-loud speaking daily is enough for visible progress within a month. More is better, but consistency matters most: 15 minutes every day beats 2 hours once a week.',
+      },
+      {
+        question: 'When is the best time of day to practice speaking?',
+        answer:
+          'Whenever you’ll reliably do it — anchored to an existing habit like morning coffee or a commute. Morning practice has a small bonus: it warms up your English for the rest of the day’s real conversations.',
+      },
+      {
+        question: 'What should I do if I miss a day of practice?',
+        answer:
+          'Nothing dramatic — just don’t miss the next one. The "never miss twice" rule protects the habit. On overloaded days, do a 5-minute mini-session instead of skipping; keeping the chain alive matters more than the session length.',
+      },
+    ],
+    related: ['how-to-speak-english-fluently', 'practice-english-speaking-at-home', 'english-conversation-practice-online'],
+  },
+];
+
+export function getGuide(slug: string): Guide | undefined {
+  return guides.find((g) => g.slug === slug);
+}
