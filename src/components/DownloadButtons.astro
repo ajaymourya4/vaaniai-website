@@ -84,10 +84,24 @@ const height = size === 'large' ? 'h-[56px]' : 'h-[44px]';
     return dialog;
   }
 
+  function capture(event: string, props: Record<string, string>) {
+    (window as any).posthog?.capture(event, props);
+  }
+
   document.addEventListener('click', (e) => {
     const target = e.target as HTMLElement;
+    const playLink = target.closest('a[href*="play.google.com"]');
+    if (playLink) {
+      capture('play_store_click', {
+        placement: playLink.closest('dialog')
+          ? 'ios-dialog'
+          : playLink.closest('section')?.id || 'content',
+        path: location.pathname,
+      });
+    }
     if (target.closest('[data-ios-coming-soon]')) {
       ensureDialog().showModal();
+      capture('ios_dialog_opened', { path: location.pathname });
     } else if (target.closest('[data-dialog-close]')) {
       (document.getElementById(DIALOG_ID) as HTMLDialogElement | null)?.close();
     }

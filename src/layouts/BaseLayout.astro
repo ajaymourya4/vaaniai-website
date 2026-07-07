@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import { siteConfig } from '@data/seo';
 import { faqData } from '@data/faq';
+import PostHog from '@components/posthog.astro';
 
 interface Props {
   title?: string;
@@ -163,6 +164,8 @@ const breadcrumbSchema = {
     {schemas.map((schema) => (
       <script type="application/ld+json" set:html={JSON.stringify(schema)} />
     ))}
+
+    {import.meta.env.PROD && <PostHog />}
 
     <meta name="theme-color" content="#0a0c10" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
