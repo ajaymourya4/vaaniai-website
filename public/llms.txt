@@ -46,7 +46,7 @@ Vaani is an English speaking practice app. It uses AI to hold real voice convers
 ## Links
 
 - Website: https://getvaani.app
-- Google Play: https://play.google.com/store/apps/details?id=app.vaaniai
+- Google Play: https://play.google.com/store/apps/details?id=app.getvaani
 
 ## Contact
 
