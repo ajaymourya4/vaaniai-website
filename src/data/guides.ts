@@ -37,11 +37,14 @@ export interface Guide {
   related: string[];
 }
 
+const AUTHOR = { name: 'Ajay Mourya', jobTitle: 'Founder, Vaani' };
+
 export const guides: Guide[] = [
   {
     slug: 'how-to-speak-english-fluently',
     publishedAt: '2026-07-07',
     updatedAt: '2026-07-07',
+    author: AUTHOR,
     keyword: 'how to speak english fluently',
     metaTitle: 'How to Speak English Fluently: 10 Steps That Work | Vaani',
     metaDescription:
@@ -159,6 +162,7 @@ export const guides: Guide[] = [
     slug: 'practice-english-speaking-at-home',
     publishedAt: '2026-07-07',
     updatedAt: '2026-07-07',
+    author: AUTHOR,
     keyword: 'practice english speaking at home',
     metaTitle: 'Practice English Speaking at Home Alone: 7 Ways | Vaani',
     metaDescription:
@@ -263,69 +267,251 @@ export const guides: Guide[] = [
   {
     slug: 'english-speaking-practice-for-job-interviews',
     publishedAt: '2026-07-07',
-    updatedAt: '2026-07-07',
+    updatedAt: '2026-10-01',
+    author: AUTHOR,
     keyword: 'english speaking practice for job interviews',
-    metaTitle: 'English Speaking Practice for Job Interviews | Vaani',
+    metaTitle: 'English Interview Practice: Questions & Answers | Vaani',
     metaDescription:
-      'Prepare to interview in English: the questions to rehearse, how to practice answers aloud, and how to run AI mock interviews until you stop freezing.',
-    title: 'English Speaking Practice for Job Interviews: How to Prepare',
+      'Practice English for job interviews: 10 common questions with sample spoken answers for IT roles, phrases for when you freeze, and a 5-day mock interview plan.',
+    title: 'English Interview Speaking Practice: Questions, Sample Answers and a 5-Day Plan',
     intro:
-      'The way to stop freezing in English job interviews is to rehearse out loud — not to write better notes. Practice answering the questions you will actually be asked, speak your answers repeatedly until they flow, and get feedback on grammar and pronunciation so small errors don’t undermine your confidence. Here is a preparation plan you can run in the days before your interview.',
+      'The fastest way to stop freezing in an English job interview is to rehearse your answers out loud, not on paper. Speak the questions you will actually be asked until your answers flow, and fix the grammar and pronunciation slips that make you nervous. This guide gives you the 10 questions to practice, sample answers for IT roles, phrases for when your mind goes blank, and a 5-day plan to get ready.',
     sections: [
       {
-        heading: 'Why interviews make your English disappear',
+        heading: 'Why your English disappears in interviews',
         blocks: [
           {
             type: 'p',
-            text: 'Under pressure, your brain prioritizes the content of your answer — and your English, the less automatic skill, collapses first. Candidates who "know English" stumble in interviews because they have never produced professional English out loud under time pressure. The fix is rehearsal: answers you have spoken ten times come out smoothly even when you are nervous, because they no longer require conscious assembly.',
+            text: 'Under pressure, your brain puts its effort into what you are saying, and your English, the less automatic skill, is the first thing to slip. That is why candidates who read and write English comfortably still stumble in interviews: they have rarely spoken professional English out loud with someone waiting for the answer. Rehearsal fixes this. An answer you have spoken ten times comes out smoothly even when you are nervous, because you no longer have to build it word by word.',
+          },
+          {
+            type: 'p',
+            text: 'If nervousness is the bigger problem for you, start with our guide on [speaking English confidently without fear](/guides/speak-english-confidently-without-fear/).',
           },
         ],
       },
       {
-        heading: 'The questions to rehearse first',
+        heading: 'The 10 interview questions to practice speaking',
         blocks: [
           {
             type: 'p',
-            text: 'Interviews are more predictable than they feel. Prepare spoken — not written — answers to these, and you have covered most of a typical interview:',
+            text: 'Whether you are interviewing for a fresher role at an IT services company or a developer job at a product startup, most interviews draw from the same small set of questions. Prepare spoken answers for these and you have covered most of the conversation. The first five have sample answers below.',
           },
           {
             type: 'list',
             items: [
-              '"Tell me about yourself" — a 60–90 second spoken introduction; this sets the tone for everything after.',
-              '"Why do you want this role / why should we hire you?"',
+              '"Tell me about yourself"',
+              '"Why should we hire you?"',
               '"What are your strengths and weaknesses?"',
-              '"Tell me about a challenge you faced and how you handled it" — use a simple Situation → Action → Result structure.',
-              '"Where do you see yourself in five years?"',
-              '"Do you have any questions for us?" — prepare two questions of your own.',
+              '"Tell me about a challenge you faced and how you handled it"',
+              '"Why do you want to join this company?"',
+              '"Where do you see yourself in five years?" Show ambition that fits the company: "I’d like to be leading a small team and owning a module end to end."',
+              '"Why are you leaving your current job?" Stay positive. Talk about the growth you want, never complaints about your manager or team.',
+              '"What are your salary expectations?" Research the range for the role first, then give a range: "Based on my research, I’m looking for X to Y lakh per annum, but I’m open to discussing the full package."',
+              '"Can you explain this gap in your resume?" Give one honest sentence about the reason, then move to what you did to stay current, such as courses or projects.',
+              '"Do you have any questions for us?" Always say yes, and prepare two, such as "What does the first month look like for someone in this role?"',
             ],
-          },        ],
+          },
+          {
+            type: 'p',
+            text: 'Use the sample answers as a structure, not a script. Paragraphs memorised word for word crack under pressure, while a clear structure holds. Put your own details in, then practice saying your version out loud until it sounds like you.',
+          },
+        ],
       },
       {
-        heading: 'A 5-day speaking practice plan before the interview',
+        heading: '"Tell me about yourself": sample answers for IT roles',
+        blocks: [
+          {
+            type: 'p',
+            text: 'This is almost always the first question, and it sets the tone for the rest of the interview. Use a simple present, past, future structure: who you are now, one or two things you have done that prove it, and what you want next. Keep it to 60 to 90 seconds when spoken.',
+          },
+          {
+            type: 'example',
+            label: 'Sample answer · Fresher, B.Tech CSE',
+            text: 'Hi, I’m Rahul. I recently completed my B.Tech in Computer Science, and I graduated in 2025.\n\nIn my final year, I worked with two classmates on a library management web app using React and Node.js. I handled the backend and the database, and it showed me how much I enjoy solving problems for real users. I also did a two-month internship where I wrote test cases for a payments module.\n\nNow I’m looking for a software engineer role where I can keep building my backend skills, and that’s why this position caught my attention.',
+          },
+          {
+            type: 'example',
+            label: 'Sample answer · 3 years’ experience, QA engineer',
+            text: 'Hi, I’m Sneha. I’m a QA engineer with three years of experience. I currently work at an IT services company in Bengaluru, where I test web and mobile apps for a retail client.\n\nOver the last year, I moved our regression suite from manual testing to automated tests with Selenium and Java, which cut our release testing from three days to one.\n\nI’m now looking for a role with more ownership of test automation, and your team’s focus on product quality is a big reason I applied.',
+          },
+        ],
+      },
+      {
+        heading: '"Why should we hire you?"',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Connect what you can do to what the role needs, and back it up with one example. Avoid lists of adjectives like "hardworking and dedicated" with no proof; every candidate says them.',
+          },
+          {
+            type: 'example',
+            label: 'Sample answer · Fresher, developer role',
+            text: 'You need someone who can pick up your stack quickly and work well in a team. For my final-year project, I learned Node.js from scratch in about three weeks and then built the entire backend. During my internship, I worked in a team of six and learned to write code that other people review and maintain.\n\nI can’t claim years of experience, but I learn fast, I take feedback well, and I’m genuinely interested in the kind of products you build.',
+          },
+        ],
+      },
+      {
+        heading: '"What are your strengths and weaknesses?"',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Pick one strength and prove it with an example. For the weakness, choose something real that does not disqualify you for the role, and show what you are doing about it. Skip "I’m a perfectionist"; interviewers hear it every day.',
+          },
+          {
+            type: 'example',
+            label: 'Sample answer',
+            text: 'My biggest strength is debugging. When something breaks, I stay calm and work through it step by step. During my internship, I was often the person teammates came to when a test kept failing.\n\nA weakness I’m working on is speaking up in meetings. I used to stay quiet even when I had ideas. Now I write down one point before each meeting and make sure I share it, and it’s getting easier every week.',
+          },
+        ],
+      },
+      {
+        heading: '"Tell me about a challenge you faced"',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Use the STAR structure: Situation, Task, Action, Result. Keep the situation short and spend most of your time on what you did. Interviewers want to hear "I", not only "we".',
+          },
+          {
+            type: 'example',
+            label: 'Sample answer · STAR structure',
+            text: 'Two days before a client demo during my internship, our login feature started failing for some users. My task was to find the cause.\n\nI went through the logs, reproduced the issue, and found that session tokens were expiring too early on one server. I fixed the configuration and added a test so the problem would not come back.\n\nThe demo went ahead on time, and my manager asked me to document the fix for the rest of the team.',
+          },
+        ],
+      },
+      {
+        heading: '"Why do you want to join this company?"',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Spend ten minutes researching the company before the interview and mention something specific: its products, technology, training or growth. A generic answer ("It’s a reputed company") tells the interviewer you did not prepare.',
+          },
+          {
+            type: 'example',
+            label: 'Sample answer',
+            text: 'I read about how your engineering team moved to a microservices setup, and I want to work somewhere that takes engineering quality seriously. I also like that freshers here work on client projects early, because I learn best by doing real work. And your training program in cloud technologies matches exactly where I want to grow.',
+          },
+        ],
+      },
+      {
+        heading: 'Phrases to use when you freeze',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Everyone blanks at some point in an interview. What matters is having a phrase ready so the silence does not turn into panic. Practice these until they come out automatically:',
+          },
+          {
+            type: 'table',
+            head: ['Situation', 'What to say'],
+            rows: [
+              ['You need time to think', '"That’s a good question. Let me think about it for a moment."'],
+              ['You didn’t catch the question', '"Sorry, could you repeat the question, please?"'],
+              ['You’re not sure what they mean', '"Just to make sure I understand, do you mean…?"'],
+              ['You made a mistake mid-sentence', '"Sorry, let me put that another way."'],
+              ['You don’t know the answer', '"I haven’t worked with that yet, but here’s how I would approach it."'],
+              ['Explaining your thinking in a technical round', '"My first idea is to…, but let me check the edge cases."'],
+              ['Finishing an answer', '"So that’s how I handled it."'],
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Common Indian English mistakes in interviews',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Many of these phrases are normal in Indian English, and any Indian interviewer will understand them. But if you are interviewing with a global company, a foreign client or an interviewer outside India, the standard forms sound more polished:',
+          },
+          {
+            type: 'table',
+            head: ['Instead of', 'Say', 'Why'],
+            rows: [
+              ['"I am having 3 years of experience."', '"I have 3 years of experience."', '"Have" meaning "own" is not used in the -ing form.'],
+              ['"I passed out in 2025."', '"I graduated in 2025."', 'Outside India, "passed out" means fainted.'],
+              ['"Myself Rahul."', '"I’m Rahul." or "My name is Rahul."', '"Myself" cannot be the subject of a sentence.'],
+              ['"My good name is Rahul."', '"My name is Rahul."', '"Good name" is a translation from Hindi and sounds unusual to international listeners.'],
+              ['"I have completed my B.Tech in 2025."', '"I completed my B.Tech in 2025."', 'With a specific past year, use the simple past.'],
+              ['"I will revert back to you."', '"I’ll get back to you."', '"Revert" means to return to an earlier state, and "revert back" repeats itself.'],
+              ['"Please do the needful."', 'Name the action: "Please send me the offer letter."', 'The phrase is unclear to people outside India.'],
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Speaking exercises to do before the interview',
         blocks: [
           {
             type: 'steps',
             items: [
               {
-                title: 'Day 1 — Draft your stories out loud',
-                text: 'Don’t write scripts. Speak each answer freely three times; it will tighten naturally. Scripts memorized word-for-word crack under pressure — spoken outlines don’t.',
+                title: 'Record and review',
+                text: 'Record your answer on your phone, listen back once, and fix one thing at a time: a filler word, a grammar slip, or a sentence that runs too long.',
               },
               {
-                title: 'Day 2 — Fix the language',
-                text: 'Practice your answers with a feedback source and clean up recurring grammar mistakes and mispronounced words — especially job-specific vocabulary you’ll definitely need.',
+                title: 'The 60-second timer drill',
+                text: 'Set a timer and deliver "tell me about yourself" in 60 to 90 seconds. If you finish too early, add one example. If you run over, cut until it fits.',
               },
               {
-                title: 'Day 3 — Run a full mock interview',
-                text: 'Simulate the real thing end-to-end: unpredictable question order, follow-up questions, no pausing. This is where role-play practice with an AI interviewer shines.',
+                title: 'Drill the words you will definitely say',
+                text: 'Your job title, your tools (Kubernetes, PostgreSQL, Selenium), your college and the company name. Mispronouncing these is distracting, so practice them until they are automatic. Our [pronunciation guide](/guides/improve-english-pronunciation/) shows how.',
               },
               {
-                title: 'Day 4 — Drill your weak spots',
+                title: 'Explain one project out loud',
+                text: 'For technical rounds, practice explaining a project in plain English: what it does, your part in it, and one problem you solved. Interviewers judge how clearly you explain, not only what you built.',
+              },
+              {
+                title: 'Run a mock interview with follow-up questions',
+                text: 'Ask a friend, or use an AI interviewer, to ask questions in random order with follow-ups like "Why did you choose that approach?" Nothing else comes as close to the real pressure.',
+              },
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'A 5-day English mock interview plan',
+        blocks: [
+          {
+            type: 'steps',
+            items: [
+              {
+                title: 'Day 1: Draft your answers out loud',
+                text: 'Don’t write scripts. Speak each answer freely three times, using the structures above; it will tighten naturally.',
+              },
+              {
+                title: 'Day 2: Fix the language',
+                text: 'Practice your answers with a feedback source and clean up recurring grammar mistakes and mispronounced words, especially the technical vocabulary you will definitely need.',
+              },
+              {
+                title: 'Day 3: Run a full mock interview',
+                text: 'Simulate the real thing from start to finish: unpredictable question order, follow-up questions, no pausing. This is where practicing with an AI interviewer helps most.',
+              },
+              {
+                title: 'Day 4: Drill your weak spots',
                 text: 'Re-run only the questions that went badly. Drill mispronounced words individually until they are automatic.',
               },
               {
-                title: 'Day 5 — Light rehearsal and rest',
-                text: 'One relaxed run-through of "tell me about yourself" and your two hardest questions. Confidence on the day comes from knowing you’ve already done this conversation before.',
+                title: 'Day 5: Light rehearsal and rest',
+                text: 'Do one relaxed run-through of "tell me about yourself" and your two hardest questions. Confidence on the day comes from knowing you have already had this conversation.',
               },
+            ],
+          },
+          {
+            type: 'p',
+            text: 'Interview tomorrow? Spend one focused hour: say "tell me about yourself" five times with a timer, run one full mock interview, and drill the three words you stumble on most. Then rest.',
+          },
+        ],
+      },
+      {
+        heading: 'Interview rounds in India: what changes in each',
+        blocks: [
+          {
+            type: 'list',
+            items: [
+              'HR round: expect "tell me about yourself", strengths, relocation and salary. Clear, confident answers matter more than complex vocabulary.',
+              'Technical round: you will explain code, logic or past projects in English. Think out loud in short sentences, and say when you need a moment.',
+              'Group discussion, common in campus placements: speak early, build on other people’s points ("Adding to what Priya said…"), and offer a summary at the end if no one else does. Good points beat talking the most.',
+              'Phone and video interviews: the interviewer cannot read your body language, so speak a little slower than usual, pause between points, and test your microphone before the call.',
+              'Managerial or client round: expect situational questions such as "What would you do if a deadline was at risk?" Answer with the STAR structure.',
             ],
           },
         ],
@@ -334,13 +520,13 @@ export const guides: Guide[] = [
     vaani: {
       heading: 'How to run mock interviews with Vaani',
       intro:
-        'Vaani’s Role Play mode and Work & Career topic let you rehearse interview English in a real back-and-forth voice conversation — with corrections after every answer, and none of the embarrassment of practicing in front of a person.',
+        'Vaani’s Role Play mode and Work & Career topic let you rehearse interview English in a real back-and-forth voice conversation, with corrections after every answer and none of the embarrassment of practicing in front of a person.',
       steps: [
-        'Open the Practice Hub, switch to Role Play, and choose an interview scenario — or pick the Work & Career topic for professional conversation practice.',
-        'Answer the AI interviewer’s questions out loud using hold-to-speak, including unexpected follow-ups — just like a real interview.',
+        'Open the Practice Hub, switch to Role Play, and choose an interview scenario, or pick the Work & Career topic for professional conversation practice.',
+        'Answer the AI interviewer’s questions out loud using hold-to-speak, including unexpected follow-ups, just like a real interview.',
         'Review your accuracy score and instant corrections after each answer: grammar slips, mispronounced words, and stronger word choices.',
-        'Drill the specific words that tripped you up — say your key vocabulary (your job title, your skills) until the accuracy score shows they’re clean.',
-        'Repeat the scenario daily before your interview. Each run gets measurably smoother, and you walk in having already survived the conversation many times.',
+        'Drill the specific words that tripped you up. Say your key vocabulary (your job title, your skills) until the accuracy score shows they are clean.',
+        'Repeat the scenario daily before your interview. Each run gets smoother, and you walk in having already practiced the conversation many times.',
       ],
       screenshot: {
         src: '/images/screenshots/vaani-ai-english-conversation-practice.jpg',
@@ -351,17 +537,22 @@ export const guides: Guide[] = [
       {
         question: 'How do I stop freezing when interviewing in English?',
         answer:
-          'Freezing happens when you compose answers from scratch under pressure. Rehearse your core answers out loud until they are semi-automatic, and simulate the interview several times before the real one. Familiarity, not more vocabulary, is what removes the freeze.',
+          'Freezing happens when you compose answers from scratch under pressure. Rehearse your core answers out loud until they are semi-automatic, keep a few phrases ready for when you blank, and simulate the interview several times before the real one. Familiarity, not more vocabulary, is what removes the freeze.',
+      },
+      {
+        question: 'How long should my self-introduction be in an interview?',
+        answer:
+          'Aim for 60 to 90 seconds when spoken, which is roughly 120 to 180 words. Cover who you are now, one or two achievements that prove it, and why you want this role. Anything longer starts to lose the interviewer’s attention.',
       },
       {
         question: 'Do small grammar mistakes matter in a job interview?',
         answer:
-          'Less than most candidates fear. Interviewers care about clarity and confidence far more than perfect grammar. That said, cleaning up repeated errors in practice is worth it — not for the interviewer, but because knowing your English is solid removes a major source of nervousness.',
+          'Less than most candidates fear. Interviewers care about clarity and confidence far more than perfect grammar. Cleaning up repeated errors in practice is still worth it, not for the interviewer, but because knowing your English is solid removes a major source of nervousness.',
       },
       {
         question: 'How many days before an interview should I start practicing?',
         answer:
-          'Five days of 15–20 minute daily sessions is a solid runway for the language side. If you have less time, prioritize speaking "tell me about yourself" out loud repeatedly and one full mock-interview run.',
+          'Five days of 15 to 20 minute daily sessions is a solid runway for the language side. If you have less time, prioritize speaking "tell me about yourself" out loud repeatedly and one full mock interview.',
       },
     ],
     related: ['speak-english-confidently-without-fear', 'improve-english-pronunciation', 'how-to-speak-english-fluently'],
@@ -371,6 +562,7 @@ export const guides: Guide[] = [
     slug: 'improve-english-pronunciation',
     publishedAt: '2026-07-07',
     updatedAt: '2026-07-07',
+    author: AUTHOR,
     keyword: 'how to improve english pronunciation',
     metaTitle: 'How to Improve English Pronunciation: Daily Exercises | Vaani',
     metaDescription:
@@ -472,6 +664,7 @@ export const guides: Guide[] = [
     slug: 'speak-english-confidently-without-fear',
     publishedAt: '2026-07-07',
     updatedAt: '2026-07-07',
+    author: AUTHOR,
     keyword: 'how to speak english confidently',
     metaTitle: 'Speak English Confidently: Overcome Fear & Hesitation | Vaani',
     metaDescription:
@@ -577,6 +770,7 @@ export const guides: Guide[] = [
     slug: 'english-conversation-practice-online',
     publishedAt: '2026-07-07',
     updatedAt: '2026-07-07',
+    author: AUTHOR,
     keyword: 'english conversation practice online',
     metaTitle: 'English Conversation Practice Online: Start Today | Vaani',
     metaDescription:
@@ -667,6 +861,7 @@ export const guides: Guide[] = [
     slug: 'practice-english-speaking-with-ai',
     publishedAt: '2026-07-07',
     updatedAt: '2026-07-07',
+    author: AUTHOR,
     keyword: 'practice english speaking with ai',
     metaTitle: 'Practice English Speaking with AI: Complete Guide | Vaani',
     metaDescription:
@@ -770,6 +965,7 @@ export const guides: Guide[] = [
     slug: 'daily-english-speaking-practice',
     publishedAt: '2026-07-07',
     updatedAt: '2026-07-07',
+    author: AUTHOR,
     keyword: 'daily english speaking practice',
     metaTitle: 'Daily English Speaking Practice: 15-Minute Routine | Vaani',
     metaDescription:
