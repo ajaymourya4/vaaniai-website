@@ -36,6 +36,7 @@ Vaani is an English speaking practice app. It uses AI to hold real voice convers
 - How to Speak English Fluently: https://getvaani.app/guides/how-to-speak-english-fluently/
 - Practice English Speaking at Home (Alone): https://getvaani.app/guides/practice-english-speaking-at-home/
 - English Speaking Practice for Job Interviews: https://getvaani.app/guides/english-speaking-practice-for-job-interviews/
+- Self Introduction in English for Interview: https://getvaani.app/guides/self-introduction-in-english-for-interview/
 - How to Improve English Pronunciation: https://getvaani.app/guides/improve-english-pronunciation/
 - Speak English Confidently Without Fear: https://getvaani.app/guides/speak-english-confidently-without-fear/
 - English Conversation Practice Online: https://getvaani.app/guides/english-conversation-practice-online/

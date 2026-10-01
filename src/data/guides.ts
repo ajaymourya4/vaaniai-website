@@ -335,6 +335,10 @@ export const guides: Guide[] = [
             label: 'Sample answer · 3 years’ experience, QA engineer',
             text: 'Hi, I’m Sneha. I’m a QA engineer with three years of experience. I currently work at an IT services company in Bengaluru, where I test web and mobile apps for a retail client.\n\nOver the last year, I moved our regression suite from manual testing to automated tests with Selenium and Java, which cut our release testing from three days to one.\n\nI’m now looking for a role with more ownership of test automation, and your team’s focus on product quality is a big reason I applied.',
           },
+          {
+            type: 'p',
+            text: 'For 10 more samples, including 30-second and video interview versions, see our guide to [self introduction in English for interview](/guides/self-introduction-in-english-for-interview/).',
+          },
         ],
       },
       {
@@ -556,6 +560,257 @@ export const guides: Guide[] = [
       },
     ],
     related: ['speak-english-confidently-without-fear', 'improve-english-pronunciation', 'how-to-speak-english-fluently'],
+  },
+
+  {
+    slug: 'self-introduction-in-english-for-interview',
+    publishedAt: '2026-10-01',
+    updatedAt: '2026-10-01',
+    author: AUTHOR,
+    keyword: 'self introduction in english for interview',
+    metaTitle: 'Self Introduction in English for Interview (Samples) | Vaani',
+    metaDescription:
+      'How to introduce yourself in an interview in English: a 4-part structure, 10 sample self introductions for IT freshers and experienced candidates, and how to say it confidently.',
+    title: 'Self Introduction in English for Interview: 10 Samples for IT Jobs and How to Say It',
+    intro:
+      'A good self introduction in an interview follows a simple formula: a polite greeting, who you are now, one thing you have done that proves it, and why you want this role. Keep it to 60 to 90 seconds when spoken. Below you will find the structure, 10 sample introductions for IT freshers and experienced candidates, the mistakes to avoid, and how to practice saying yours so it sounds natural rather than memorised.',
+    sections: [
+      {
+        heading: 'The 4-part structure of a self introduction',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Interviewers already have your resume. Your introduction is not a summary of it; it is a short, spoken story that tells them who you are and why you fit this job. Every strong introduction has the same four parts:',
+          },
+          {
+            type: 'table',
+            head: ['Part', 'What to say', 'Example line'],
+            rows: [
+              ['1. Who you are now', 'Your name and current status or role', '"I’m Rahul, a 2025 B.Tech Computer Science graduate."'],
+              ['2. Proof', 'One project, internship or achievement', '"In my final year, I built a library management app with React and Node.js."'],
+              ['3. Strengths', '2 or 3 skills that match the job description', '"I’m comfortable with Java, SQL and REST APIs."'],
+              ['4. Why this role', 'Connect your goal to their job', '"That’s why this backend developer role interests me."'],
+            ],
+          },
+          {
+            type: 'p',
+            text: 'Pick the strengths from the job description, not from everything you know. Three skills the interviewer is looking for beat ten that they are not.',
+          },
+        ],
+      },
+      {
+        heading: 'How to start and end your self introduction',
+        blocks: [
+          {
+            type: 'p',
+            text: 'A clean opening and a clear ending make even a simple introduction sound confident. Use one of these to start:',
+          },
+          {
+            type: 'list',
+            items: [
+              '"Good morning, and thank you for the opportunity. I’m Rahul…"',
+              '"Thank you for having me today. My name is Sneha, and I’m a QA engineer…"',
+              '"Hi, I’m Arjun. Thanks for taking the time to meet me."',
+            ],
+          },
+          {
+            type: 'p',
+            text: 'And one of these to finish, so the interviewer knows you are done:',
+          },
+          {
+            type: 'list',
+            items: [
+              '"…and that’s why I’m excited about this role."',
+              '"…so I’m looking forward to learning more about the team."',
+              '"I’d be happy to tell you more about my project if you’d like."',
+            ],
+          },
+          {
+            type: 'p',
+            text: 'Avoid opening with "Myself Rahul" or "My good name is". Both are common in Indian English but sound unusual in interviews with global companies. Our [interview speaking practice guide](/guides/english-speaking-practice-for-job-interviews/) has a full table of these phrases and what to say instead.',
+          },
+        ],
+      },
+      {
+        heading: 'Sample self introductions for freshers',
+        blocks: [
+          {
+            type: 'p',
+            text: 'As a fresher, your proof is your project, internship or a skill you can show. You do not need work experience to give a strong introduction; you need one concrete example.',
+          },
+          {
+            type: 'example',
+            label: 'Sample 1 · B.Tech CSE fresher with an internship',
+            text: 'Good morning, and thank you for the opportunity. I’m Rahul, and I completed my B.Tech in Computer Science this year.\n\nDuring a two-month internship at a fintech startup, I wrote APIs for a payments dashboard using Spring Boot and fixed bugs reported by the QA team. In my final year, I also built a library management app with React and Node.js.\n\nI enjoy backend work most, especially designing APIs, and that’s why this software developer role interests me.',
+          },
+          {
+            type: 'example',
+            label: 'Sample 2 · BCA fresher',
+            text: 'Hi, I’m Kavya. I completed my BCA this year, and I’m now applying for junior developer roles.\n\nFor my final-year project, I built a hostel complaint system in PHP and MySQL that students at my college used for a full semester. I also completed an online course in Python and solved over a hundred coding problems to strengthen my basics.\n\nI’m looking for a role where I can learn from an experienced team and grow as a developer, and your fresher training program is a big reason I applied.',
+          },
+          {
+            type: 'example',
+            label: 'Sample 3 · Fresher with projects, no internship',
+            text: 'Thank you for having me. I’m Aditya, a 2025 B.Tech graduate in Information Technology.\n\nI didn’t get an internship, so I focused on building projects. My main one is an expense tracker app built with React Native and Firebase, which I published for my friends and family to use. Building it taught me how to take feedback from real users and fix what they found confusing.\n\nI’d like to start my career in mobile development, and this role matches exactly what I’ve been practicing on my own.',
+          },
+          {
+            type: 'example',
+            label: 'Sample 4 · ECE graduate moving into IT',
+            text: 'Good afternoon. I’m Neha, and I graduated in Electronics and Communication Engineering this year.\n\nIn my third year, I realised I enjoyed the programming parts of my course more than the hardware, so I started learning Java and data structures on my own. Since then, I’ve completed a full-stack course and built a student attendance app as my main project.\n\nMy electronics background helps me understand how systems work end to end, and I’m excited to apply that in a software engineering role.',
+          },
+        ],
+      },
+      {
+        heading: 'Sample self introductions for experienced candidates',
+        blocks: [
+          {
+            type: 'p',
+            text: 'With experience, lead with your current role and your strongest result. Use numbers where you can: they make your proof concrete and easy to remember.',
+          },
+          {
+            type: 'example',
+            label: 'Sample 5 · QA engineer, 3 years',
+            text: 'Hi, I’m Sneha. I’m a QA engineer with three years of experience at an IT services company in Bengaluru, where I test web and mobile apps for a retail client.\n\nLast year, I moved our regression suite from manual testing to automated tests with Selenium and Java, which cut release testing from three days to one.\n\nI’m now looking for a role with more ownership of test automation, and your team’s focus on product quality is why I applied.',
+          },
+          {
+            type: 'example',
+            label: 'Sample 6 · Java developer, 5 years',
+            text: 'Good morning. I’m Vikram, a backend developer with five years of experience, mostly in Java and Spring Boot.\n\nAt my current company, I lead a team of three on an order management system that handles around fifty thousand orders a day. Recently, I redesigned our slowest service, which brought response times down by about forty percent.\n\nI’ve worked on client projects my whole career, and I’d now like to build a product long term, which is what drew me to this role.',
+          },
+          {
+            type: 'example',
+            label: 'Sample 7 · Technical support to developer',
+            text: 'Hi, I’m Imran. For the past two years, I’ve worked in technical support for a SaaS product, helping customers fix login and integration issues.\n\nWhile doing that, I started writing small Python scripts to automate our most repetitive support tasks, and my team now uses three of them every day. That’s when I decided to move into development, and I’ve since completed a course in Django.\n\nI understand the product from the customer’s side, and I’d like to use that in a junior developer role.',
+          },
+        ],
+      },
+      {
+        heading: 'Short versions for specific situations',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Prepare more than one length. Campus placements, group discussions and panel interviews often want something shorter, while some interviewers ask you to take your time.',
+          },
+          {
+            type: 'example',
+            label: 'Sample 8 · 30-second version (campus placement or group discussion)',
+            text: 'Good morning, everyone. I’m Rahul, a final-year Computer Science student. I’ve built two web applications using React and Node.js, and I did a two-month internship in backend development. I’m interested in software development roles, and I’m happy to be here.',
+          },
+          {
+            type: 'example',
+            label: 'Sample 9 · Video or phone interview',
+            text: 'Hi, thank you for having me. My name is Kavya, K-A-V-Y-A. I completed my BCA this year.\n\nI’d like to share two things about my background. First, my final-year project: a hostel complaint system that students used for a full semester. Second, I’ve been strengthening my Python skills through an online course.\n\nI’m applying for this role because I want to grow as a developer in a structured team.',
+          },
+          {
+            type: 'p',
+            text: 'On video and phone calls, the interviewer cannot see your body language, so signpost clearly ("I’d like to share two things"), spell your name if it is unusual, and speak a little slower than normal.',
+          },
+          {
+            type: 'example',
+            label: 'Sample 10 · 2-minute version (when asked to take your time)',
+            text: 'Good morning, and thank you for the opportunity. I’m Vikram, a backend developer with five years of experience in Java and Spring Boot.\n\nI started my career at an IT services company, working on banking applications, where I learned to write code that has to be reliable and secure. Three years ago, I moved to my current company, where I now lead a team of three on an order management system that handles around fifty thousand orders a day.\n\nThe project I’m proudest of is redesigning our slowest service. I profiled it, found the database queries causing the delay, and rewrote them with caching. Response times dropped by about forty percent, and our support tickets about slow pages went down noticeably.\n\nOutside work, I mentor two junior developers, which has made me much better at explaining technical decisions clearly.\n\nI’ve spent my career on client projects, and I’d now like to build and improve one product long term. That’s exactly what this role offers, which is why I’m excited to be here.',
+          },
+        ],
+      },
+      {
+        heading: 'Self introduction mistakes to avoid',
+        blocks: [
+          {
+            type: 'table',
+            head: ['Mistake', 'Do this instead'],
+            rows: [
+              ['Reading out your resume line by line', 'Pick one proof point; the interviewer already has your resume.'],
+              ['Family details ("My father is a bank manager, and I have one sister")', 'Skip them in IT interviews unless you are asked.'],
+              ['A long list of hobbies', 'Mention one only if it shows a skill relevant to the job.'],
+              ['Speaking for more than 2 minutes', 'Time yourself and aim for 60 to 90 seconds.'],
+              ['Reciting a memorised script in a flat voice', 'Memorise the structure, not the exact words.'],
+              ['Ending with "That’s all" or trailing off', 'Finish with why you want this role.'],
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'How to practice saying your self introduction',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Most candidates prepare their introduction on paper and then say it for the first time in the interview. The words are fine; the delivery is what fails. Practice it the way you will use it: out loud.',
+          },
+          {
+            type: 'steps',
+            items: [
+              {
+                title: 'Write bullet points, not a script',
+                text: 'Note one line for each of the four parts. Bullet points keep you on track without making you sound like you are reading.',
+              },
+              {
+                title: 'Say it out loud five times, with a timer',
+                text: 'Your first attempt will run long or stall. By the fifth, it will be tighter and closer to 60 to 90 seconds.',
+              },
+              {
+                title: 'Slow down and pause',
+                text: 'Nervous speakers rush. Pause after your name and between each part; pauses make you sound calm and give the interviewer time to absorb what you said.',
+              },
+              {
+                title: 'Stress the words that matter',
+                text: 'Your role, your project and your result are what the interviewer should remember. Say them slightly louder and slower than the words around them.',
+              },
+              {
+                title: 'Drill the technical words you will say',
+                text: 'React, PostgreSQL, Kubernetes, the company name: a mispronounced keyword distracts from a good answer. Our [pronunciation guide](/guides/improve-english-pronunciation/) shows how to fix individual words.',
+              },
+              {
+                title: 'Record yourself and fix one thing per run',
+                text: 'Listen back once. Pick a single thing to improve, such as a filler word or a rushed sentence, and do another take.',
+              },
+              {
+                title: 'Practice all three lengths',
+                text: 'Have a 30-second, a 60 to 90 second and a 2-minute version ready, so you can adapt to whatever the interviewer asks for. If nerves make your mind go blank, read our guide on [speaking English confidently without fear](/guides/speak-english-confidently-without-fear/).',
+              },
+            ],
+          },
+        ],
+      },
+    ],
+    vaani: {
+      heading: 'How to practice your self introduction with Vaani',
+      intro:
+        'Vaani’s Role Play mode lets you rehearse your introduction in a real voice conversation with an AI interviewer, then shows you exactly which words and sentences to fix.',
+      steps: [
+        'Open the Practice Hub, switch to Role Play, and choose a job interview scenario.',
+        'When the AI interviewer asks you to introduce yourself, answer out loud using hold-to-speak.',
+        'Check your accuracy score and the corrections for grammar, pronunciation and word choice.',
+        'Drill the words that tripped you up, such as your job title, tools and college name, until the accuracy score shows they are clean.',
+        'Run the scenario again and answer the follow-up questions, so your introduction leads smoothly into the rest of the interview.',
+      ],
+      screenshot: {
+        src: '/images/screenshots/vaani-instant-grammar-feedback-accuracy.jpg',
+        alt: 'Vaani app showing an accuracy score with instant feedback on a spoken English sentence and words to practice',
+      },
+    },
+    faqs: [
+      {
+        question: 'How long should a self introduction be in an interview?',
+        answer:
+          'Aim for 60 to 90 seconds when spoken, which is roughly 120 to 180 words. Prepare a 30-second version for campus placements and group discussions, and a 2-minute version in case the interviewer asks you to take your time.',
+      },
+      {
+        question: 'Should I mention my family and hobbies in my self introduction?',
+        answer:
+          'In IT interviews, usually not. Family details take time away from what the interviewer wants to know: your skills and why you fit the role. Mention a hobby only if it shows a relevant skill, such as contributing to open-source projects.',
+      },
+      {
+        question: 'How should I start my self introduction?',
+        answer:
+          'Start with a short greeting and thank the interviewer, then say your name and current status: "Good morning, and thank you for the opportunity. I’m Rahul, a 2025 Computer Science graduate." Avoid starting with "Myself Rahul".',
+      },
+      {
+        question: 'Is it okay to memorise my self introduction?',
+        answer:
+          'Memorise the structure and your key points, not every word. A word-for-word script tends to sound flat and falls apart if you lose your place. Practicing from bullet points several times out loud gives you the same confidence while still sounding natural.',
+      },
+    ],
+    related: ['english-speaking-practice-for-job-interviews', 'speak-english-confidently-without-fear', 'improve-english-pronunciation'],
   },
 
   {
