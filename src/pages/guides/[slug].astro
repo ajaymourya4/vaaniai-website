@@ -3,7 +3,7 @@ import BaseLayout from '@layouts/BaseLayout.astro';
 import Header from '@components/Header.astro';
 import Footer from '@components/Footer.astro';
 import DownloadButtons from '@components/DownloadButtons.astro';
-import { guides } from '@data/guides';
+import { guides, renderInline } from '@data/guides';
 import { siteConfig } from '@data/seo';
 
 export function getStaticPaths() {
@@ -16,6 +16,12 @@ export function getStaticPaths() {
 const { guide } = Astro.props;
 const relatedGuides = guides.filter((g) => guide.related.includes(g.slug));
 const pageUrl = `${siteConfig.url}/guides/${guide.slug}/`;
+const updatedLabel = new Date(guide.updatedAt).toLocaleDateString('en-IN', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+  timeZone: 'UTC',
+});
 
 const articleSchema = {
   '@context': 'https://schema.org',
@@ -23,7 +29,11 @@ const articleSchema = {
   headline: guide.title,
   description: guide.metaDescription,
   image: new URL(guide.vaani.screenshot.src, siteConfig.url).href,
-  author: { '@type': 'Organization', name: 'Vaani', url: siteConfig.url },
+  datePublished: guide.publishedAt,
+  dateModified: guide.updatedAt,
+  author: guide.author
+    ? { '@type': 'Person', ...guide.author }
+    : { '@type': 'Organization', name: 'Vaani', url: siteConfig.url },
   publisher: {
     '@type': 'Organization',
     name: 'Vaani',
@@ -76,6 +86,10 @@ const breadcrumbSchema = {
         <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mt-6">
           {guide.title}
         </h1>
+        <p class="text-text-muted text-sm mt-4">
+          {guide.author && <>By {guide.author.url ? <a href={guide.author.url} class="hover:text-text-primary transition-colors underline">{guide.author.name}</a> : guide.author.name} · </>}
+          Updated <time datetime={guide.updatedAt}>{updatedLabel}</time>
+        </p>
         <p class="text-text-secondary text-lg mt-6 leading-relaxed border-l-2 border-accent-blue pl-5">
           {guide.intro}
         </p>
@@ -86,14 +100,14 @@ const breadcrumbSchema = {
             {section.blocks.map((block) => (
               <>
                 {block.type === 'p' && (
-                  <p class="text-text-secondary mt-4 leading-relaxed">{block.text}</p>
+                  <p class="text-text-secondary mt-4 leading-relaxed" set:html={renderInline(block.text)} />
                 )}
                 {block.type === 'list' && (
                   <ul class="mt-4 space-y-3">
                     {block.items.map((item) => (
                       <li class="flex gap-3 text-text-secondary leading-relaxed">
                         <span class="text-accent-blue mt-1 shrink-0" aria-hidden="true">✓</span>
-                        <span>{item}</span>
+                        <span set:html={renderInline(item)} />
                       </li>
                     ))}
                   </ul>
@@ -108,10 +122,42 @@ const breadcrumbSchema = {
                           </span>
                           {item.title}
                         </h3>
-                        <p class="text-text-secondary mt-2 leading-relaxed text-[0.95rem]">{item.text}</p>
+                        <p class="text-text-secondary mt-2 leading-relaxed text-[0.95rem]" set:html={renderInline(item.text)} />
                       </li>
                     ))}
                   </ol>
+                )}
+                {block.type === 'table' && (
+                  <div class="mt-6 overflow-x-auto rounded-2xl border border-dark-border">
+                    <table class="w-full text-left text-[0.95rem]">
+                      <thead class="bg-dark-card">
+                        <tr>
+                          {block.head.map((cell) => (
+                            <th scope="col" class="px-4 py-3 font-semibold text-text-primary">{cell}</th>
+                          ))}
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {block.rows.map((row) => (
+                          <tr class="border-t border-dark-border">
+                            {row.map((cell) => (
+                              <td class="px-4 py-3 text-text-secondary align-top leading-relaxed" set:html={renderInline(cell)} />
+                            ))}
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                )}
+                {block.type === 'example' && (
+                  <figure class="mt-6 rounded-2xl bg-dark-card border-l-4 border-accent-blue p-6">
+                    {block.label && (
+                      <figcaption class="text-xs font-semibold uppercase tracking-wider text-accent-blue mb-3">{block.label}</figcaption>
+                    )}
+                    <blockquote class="space-y-3 text-text-primary leading-relaxed">
+                      {block.text.split('\n\n').map((para) => <p>{para}</p>)}
+                    </blockquote>
+                  </figure>
                 )}
               </>
             ))}

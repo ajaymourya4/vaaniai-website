@@ -2,10 +2,14 @@
 // for the keyword research behind these. Every claim about the app must be
 // supported by the Play Store listing or screenshots (no invented features).
 
+// Text in p/list/steps/table blocks may contain inline links: [anchor](/guides/slug/)
 export type GuideBlock =
   | { type: 'p'; text: string }
   | { type: 'list'; items: string[] }
-  | { type: 'steps'; items: { title: string; text: string }[] };
+  | { type: 'steps'; items: { title: string; text: string }[] }
+  | { type: 'table'; head: string[]; rows: string[][] }
+  // Sample answer / quoted script. Separate paragraphs with a blank line.
+  | { type: 'example'; label?: string; text: string };
 
 export interface GuideSection {
   heading: string;
@@ -14,6 +18,9 @@ export interface GuideSection {
 
 export interface Guide {
   slug: string;
+  publishedAt: string; // YYYY-MM-DD
+  updatedAt: string; // YYYY-MM-DD; bump only on real content changes
+  author?: { name: string; jobTitle?: string; url?: string };
   keyword: string;
   metaTitle: string;
   metaDescription: string;
@@ -33,6 +40,8 @@ export interface Guide {
 export const guides: Guide[] = [
   {
     slug: 'how-to-speak-english-fluently',
+    publishedAt: '2026-07-07',
+    updatedAt: '2026-07-07',
     keyword: 'how to speak english fluently',
     metaTitle: 'How to Speak English Fluently: 10 Steps That Work | Vaani',
     metaDescription:
@@ -148,6 +157,8 @@ export const guides: Guide[] = [
 
   {
     slug: 'practice-english-speaking-at-home',
+    publishedAt: '2026-07-07',
+    updatedAt: '2026-07-07',
     keyword: 'practice english speaking at home',
     metaTitle: 'Practice English Speaking at Home Alone: 7 Ways | Vaani',
     metaDescription:
@@ -251,6 +262,8 @@ export const guides: Guide[] = [
 
   {
     slug: 'english-speaking-practice-for-job-interviews',
+    publishedAt: '2026-07-07',
+    updatedAt: '2026-07-07',
     keyword: 'english speaking practice for job interviews',
     metaTitle: 'English Speaking Practice for Job Interviews | Vaani',
     metaDescription:
@@ -285,8 +298,7 @@ export const guides: Guide[] = [
               '"Where do you see yourself in five years?"',
               '"Do you have any questions for us?" — prepare two questions of your own.',
             ],
-          },
-        ],
+          },        ],
       },
       {
         heading: 'A 5-day speaking practice plan before the interview',
@@ -357,6 +369,8 @@ export const guides: Guide[] = [
 
   {
     slug: 'improve-english-pronunciation',
+    publishedAt: '2026-07-07',
+    updatedAt: '2026-07-07',
     keyword: 'how to improve english pronunciation',
     metaTitle: 'How to Improve English Pronunciation: Daily Exercises | Vaani',
     metaDescription:
@@ -456,6 +470,8 @@ export const guides: Guide[] = [
 
   {
     slug: 'speak-english-confidently-without-fear',
+    publishedAt: '2026-07-07',
+    updatedAt: '2026-07-07',
     keyword: 'how to speak english confidently',
     metaTitle: 'Speak English Confidently: Overcome Fear & Hesitation | Vaani',
     metaDescription:
@@ -559,6 +575,8 @@ export const guides: Guide[] = [
 
   {
     slug: 'english-conversation-practice-online',
+    publishedAt: '2026-07-07',
+    updatedAt: '2026-07-07',
     keyword: 'english conversation practice online',
     metaTitle: 'English Conversation Practice Online: Start Today | Vaani',
     metaDescription:
@@ -647,6 +665,8 @@ export const guides: Guide[] = [
 
   {
     slug: 'practice-english-speaking-with-ai',
+    publishedAt: '2026-07-07',
+    updatedAt: '2026-07-07',
     keyword: 'practice english speaking with ai',
     metaTitle: 'Practice English Speaking with AI: Complete Guide | Vaani',
     metaDescription:
@@ -748,6 +768,8 @@ export const guides: Guide[] = [
 
   {
     slug: 'daily-english-speaking-practice',
+    publishedAt: '2026-07-07',
+    updatedAt: '2026-07-07',
     keyword: 'daily english speaking practice',
     metaTitle: 'Daily English Speaking Practice: 15-Minute Routine | Vaani',
     metaDescription:
@@ -846,4 +868,19 @@ export const guides: Guide[] = [
 
 export function getGuide(slug: string): Guide | undefined {
   return guides.find((g) => g.slug === slug);
+}
+
+const escapeHtml = (s: string) =>
+  s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+
+// Escapes guide text, then turns [anchor](url) into links. Only site-relative
+// or http(s) URLs are linked; anything else stays as literal text.
+export function renderInline(text: string): string {
+  return escapeHtml(text).replace(
+    /\[([^\]]+)\]\((\/[^)\s]*|https?:\/\/[^)\s]+)\)/g,
+    (_, anchor, url) => {
+      const external = url.startsWith('http') ? ' target="_blank" rel="noopener noreferrer"' : '';
+      return `<a href="${url}"${external} class="text-accent-blue underline underline-offset-2 hover:text-text-primary transition-colors">${anchor}</a>`;
+    },
+  );
 }
