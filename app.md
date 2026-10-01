@@ -1,7 +1,7 @@
 # Vaani – App Reference & SEO Keyword Research
 
 > Source of truth for the Vaani marketing site (getvaani.app). Pulled from the
-> Google Play listing (package: `app.vaaniai`) + Play Store screenshots.
+> Google Play listing (package: `app.getvaani`) + Play Store screenshots.
 > Last updated: 2026-07-07.
 
 ---
@@ -13,8 +13,8 @@
 | Name | Vaani – English Speaking App |
 | Tagline | Speak English confidently with real conversations and instant feedback |
 | Category | Education (Language Learning) |
-| Platforms | Android (Google Play: `app.vaaniai`), iOS |
-| Play Store URL | https://play.google.com/store/apps/details?id=app.vaaniai |
+| Platforms | Android (Google Play: `app.getvaani`), iOS |
+| Play Store URL | https://play.google.com/store/apps/details?id=app.getvaani |
 | Website | https://getvaani.app |
 | Positioning | Personal AI English speaking coach — fluency through real conversation, not quizzes |
 

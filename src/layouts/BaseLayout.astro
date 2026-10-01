@@ -9,6 +9,7 @@ interface Props {
   description?: string;
   ogType?: 'website' | 'article';
   schemas?: object[];
+  noindex?: boolean;
 }
 
 const {
@@ -16,23 +17,30 @@ const {
   description = siteConfig.description,
   ogType = 'website',
   schemas = [],
+  noindex = false,
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, siteConfig.url);
 const isHome = Astro.url.pathname === '/';
+const playUrl = 'https://play.google.com/store/apps/details?id=app.getvaani';
 
 const applicationSchema = {
   '@context': 'https://schema.org',
-  '@type': 'SoftwareApplication',
+  '@type': 'MobileApplication',
   name: 'Vaani',
+  alternateName: 'Vaani AI - English Speaking',
   description: siteConfig.description,
-  url: siteConfig.url,
+  url: `${siteConfig.url}/`,
   applicationCategory: 'EducationalApplication',
   operatingSystem: 'Android',
+  downloadUrl: playUrl,
+  installUrl: playUrl,
+  screenshot: `${siteConfig.url}/images/screenshots/vaani-practice-hub-english-speaking-topics.jpg`,
   offers: {
     '@type': 'Offer',
     price: '0',
     priceCurrency: 'USD',
+    availability: 'https://schema.org/InStock',
   },
 };
 
@@ -53,9 +61,11 @@ const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'Vaani',
+  alternateName: 'Vaani AI',
   url: siteConfig.url,
   logo: `${siteConfig.url}/favicon.svg`,
   sameAs: [
+    playUrl,
     'https://twitter.com/vaaniapp',
     'https://instagram.com/vaaniapp',
   ],
@@ -89,7 +99,7 @@ const breadcrumbSchema = {
 
     <meta
       name="robots"
-      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+      content={noindex ? 'noindex, follow' : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'}
     />
 
     <meta property="og:type" content={ogType} />
@@ -141,10 +151,12 @@ const breadcrumbSchema = {
       />
     </noscript>
 
-    <script
-      type="application/ld+json"
-      set:html={JSON.stringify(applicationSchema)}
-    />
+    {isHome && (
+      <script
+        type="application/ld+json"
+        set:html={JSON.stringify(applicationSchema)}
+      />
+    )}
     <script
       type="application/ld+json"
       set:html={JSON.stringify(organizationSchema)}
