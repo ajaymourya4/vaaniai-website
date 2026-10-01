@@ -43,72 +43,176 @@ export const guides: Guide[] = [
   {
     slug: 'how-to-speak-english-fluently',
     publishedAt: '2026-07-07',
-    updatedAt: '2026-07-07',
+    updatedAt: '2026-10-01',
     author: AUTHOR,
     keyword: 'how to speak english fluently',
-    metaTitle: 'How to Speak English Fluently: 10 Steps That Work | Vaani',
+    metaTitle: 'How to Speak English Fluently: 12 Practical Steps | Vaani',
     metaDescription:
-      'Learn how to speak English fluently with 10 practical steps: daily speaking practice, thinking in English, instant feedback, and a routine you can stick to.',
-    title: 'How to Speak English Fluently: 10 Steps That Actually Work',
+      'How to speak English fluently: what fluency really means, 12 steps with daily exercises, phrases that buy you time, and a 30-day plan to stop hesitating.',
+    title: 'How to Speak English Fluently: 12 Steps, Daily Exercises and a 30-Day Plan',
     intro:
-      'To speak English fluently, you need to speak — out loud, every day — not study more grammar. Fluency is a physical skill like swimming: it is built through repetitions of real conversation, quick feedback on your mistakes, and gradually thinking in English instead of translating. Here is a step-by-step plan that works even if you have nobody to practice with.',
+      'To speak English fluently, you need to speak out loud, every day, not study more grammar. Fluency is a physical skill like swimming: you build it through repeated real conversation, quick feedback on your mistakes, and gradually thinking in English instead of translating. This guide explains what fluency actually means, gives you 12 steps with an exercise for each, and ends with a 30-day plan that works even if you have nobody to practice with.',
     sections: [
+      {
+        heading: 'What fluency in English actually means',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Fluency in English means speaking smoothly and continuously, without long pauses while you search for words. It is not the same as perfect grammar or a native accent. Many learners mix these up, chase perfect grammar, and stay hesitant for years.',
+          },
+          {
+            type: 'table',
+            head: ['Skill', 'What it means', 'What improves it'],
+            rows: [
+              ['Fluency', 'Speaking smoothly without long pauses', 'Speaking out loud often, ready-made phrases'],
+              ['Accuracy', 'Correct grammar and word choice', 'Feedback on your mistakes'],
+              ['Pronunciation', 'Saying words so listeners understand you', 'Listening, shadowing, word drills'],
+            ],
+          },
+          {
+            type: 'p',
+            text: 'You can be fluent with an Indian accent and the occasional grammar slip. What makes someone sound fluent is that they keep talking, and that listeners understand them without effort. That is the goal of every step below.',
+          },
+        ],
+      },
       {
         heading: 'Why you understand English but still can’t speak it',
         blocks: [
           {
             type: 'p',
-            text: 'Most learners have years of passive English — reading, listening, watching movies — but very few hours of active speaking. Understanding and speaking are stored as different skills in your brain. Reading another grammar book strengthens the skill you already have; only speaking builds the one you are missing. That is why someone who scores well on written tests can still freeze in a real conversation.',
+            text: 'Most learners have years of passive English, from reading, listening and watching movies, but very few hours of active speaking. Understanding and speaking are different skills. Reading another grammar book strengthens the skill you already have; only speaking builds the one you are missing. That is why someone who scores well on written tests can still freeze in a real conversation.',
+          },
+          {
+            type: 'p',
+            text: 'For many Indian learners, three more things get in the way:',
+          },
+          {
+            type: 'list',
+            items: [
+              'School taught English through reading, writing and exams, so you have had very little practice speaking it.',
+              'You translate from Hindi or your mother tongue. Sentence order is different (in Hindi, the verb usually comes at the end), so translating in real time is slow and causes pauses.',
+              'You fear being judged for mistakes, so you stay silent instead of practicing. Our guide on [speaking English confidently without fear](/guides/speak-english-confidently-without-fear/) deals with this directly.',
+            ],
           },
         ],
       },
       {
-        heading: '10 steps to become fluent in English',
+        heading: 'Where are you now? The 4 stages of speaking fluency',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Find the stage that sounds most like you. It tells you which of the steps below to focus on first.',
+          },
+          {
+            type: 'list',
+            items: [
+              'Stage 1, stuck: you understand most English but can’t start a sentence when someone talks to you. Focus on speaking daily, short sentences and learning phrases (steps 1, 2 and 5).',
+              'Stage 2, hesitant: you can speak, but with long pauses while you translate in your head. Focus on thinking in English and timed speaking drills (steps 3 and 4).',
+              'Stage 3, conversational: everyday conversation is fine, but work topics, interviews or fast speakers throw you. Focus on practicing real situations and the vocabulary of your field (step 7).',
+              'Stage 4, fluent: you speak smoothly on most topics. Focus on pronunciation and precision; our [pronunciation guide](/guides/improve-english-pronunciation/) shows how.',
+            ],
+          },
+        ],
+      },
+      {
+        heading: '12 steps to speak English fluently',
         blocks: [
           {
             type: 'steps',
             items: [
               {
                 title: 'Speak out loud every day, even alone',
-                text: 'Ten to twenty minutes of daily speaking beats a two-hour class once a week. Narrate what you are doing, describe your day, or talk with an AI conversation partner. The muscle memory of forming English sentences aloud is the foundation of fluency.',
+                text: 'Ten to twenty minutes of daily speaking beats a two-hour class once a week. The habit of forming English sentences out loud is the foundation of fluency. Try this: narrate your morning for two minutes as you get ready. For more ideas, see our guide to [practicing English speaking at home](/guides/practice-english-speaking-at-home/).',
               },
               {
-                title: 'Learn phrases, not isolated words',
-                text: 'Fluent speakers retrieve ready-made chunks — "I was wondering if…", "It turns out that…" — instead of assembling word by word. Collect full phrases from conversations and reuse them.',
+                title: 'Learn phrases, not single words',
+                text: 'Fluent speakers use ready-made chunks such as "I was wondering if…" or "It turns out that…" instead of building sentences word by word. Try this: while watching an English show, write down five useful phrases and use each one out loud that day.',
               },
               {
                 title: 'Stop translating in your head',
-                text: 'Translating from your native language is the biggest cause of hesitation. Practice thinking directly in English: name objects around you, plan your day in English, and keep sentences short so you don’t need to translate.',
+                text: 'Translating from your native language is the biggest cause of hesitation. Try this: name ten objects around you in English, then describe your room in English, without thinking of the words in your own language first.',
               },
               {
-                title: 'Get feedback on every mistake — fast',
-                text: 'Mistakes you never notice become permanent habits. The fastest improvers get corrections immediately after speaking, while the sentence is still fresh in memory.',
+                title: 'Use the 4-3-2 drill',
+                text: 'Tell the same short story three times: first in four minutes, then in three, then in two. Each round forces you to speak faster and more smoothly, because you are reusing language you have just said. Try this: tell the story of your last weekend using a timer on your phone.',
               },
               {
-                title: 'Practice real-life scenarios, not textbook dialogues',
-                text: 'Rehearse the conversations you will actually have: job interviews, ordering food, small talk with colleagues, travel situations. Scenario practice transfers directly to real life.',
+                title: 'Keep your sentences short',
+                text: 'Long, complex sentences make you plan and translate. Short sentences flow. Try this: say one idea per sentence. "I work in sales. I travel a lot. I enjoy meeting new people." sounds more fluent than one long sentence you keep restarting.',
               },
               {
-                title: 'Shadow native speakers',
-                text: 'Listen to a sentence and repeat it immediately, copying the rhythm, stress, and intonation. Shadowing trains your mouth and your ear at the same time.',
+                title: 'Get feedback on your mistakes quickly',
+                text: 'Mistakes you never notice become permanent habits. The fastest improvers get corrections right after speaking, while the sentence is still fresh in memory. Try this: after each practice session, write down the one mistake you made most often and fix it in the next session.',
+              },
+              {
+                title: 'Practice real-life situations, not textbook dialogues',
+                text: 'Rehearse the conversations you will actually have: ordering food, small talk with colleagues, a client call, a job interview. Situation practice transfers directly to real life. If you are preparing for interviews, start with our [interview speaking practice guide](/guides/english-speaking-practice-for-job-interviews/) and [self introduction samples](/guides/self-introduction-in-english-for-interview/).',
+              },
+              {
+                title: 'Shadow fluent speakers',
+                text: 'Listen to a sentence and repeat it immediately, copying the rhythm, stress and intonation. Shadowing trains your mouth and your ear at the same time. Try this: pick a short talk or interview on YouTube and shadow two or three sentences at a time for five minutes.',
+              },
+              {
+                title: 'Send English voice notes',
+                text: 'Voice notes are low-pressure speaking practice you can do every day. You can plan what to say, re-record if you want, and friends can reply. Try this: send one English voice note a day to a friend or family member who is also learning.',
               },
               {
                 title: 'Record yourself and listen back',
-                text: 'You cannot fix what you cannot hear. Recording reveals the gap between how you think you sound and how you actually sound — and shows your progress over weeks.',
+                text: 'You cannot fix what you cannot hear. Recording reveals the gap between how you think you sound and how you actually sound, and it shows your progress over weeks. Try this: record a one-minute answer to "What did you do yesterday?" every Sunday and compare it with last week’s.',
               },
               {
-                title: 'Accept mistakes as the method, not the enemy',
-                text: 'Fluency is not perfection. Native speakers make grammar slips constantly. Every mistake you make and correct in practice is one you won’t make in the moment that matters.',
-              },
-              {
-                title: 'Make it easy to show up',
-                text: 'The best practice method is the one you actually do. Remove friction: no scheduling, no partner coordination, no commute. If you can practice from your phone in five spare minutes, you will practice far more often.',
+                title: 'Treat mistakes as part of the method',
+                text: 'Fluency is not perfection. Native speakers make grammar slips all the time. Every mistake you make and correct in practice is one you will not make in the moment that matters. Try this: during practice, keep going when you make a mistake instead of stopping to restart the sentence.',
               },
               {
                 title: 'Track your progress',
-                text: 'Fluency grows too slowly to feel day-to-day. Accuracy scores, streaks, and a list of words you’ve mastered make progress visible and keep you motivated through the plateau.',
+                text: 'Fluency grows too slowly to notice day to day. Accuracy scores, streaks and a list of words you have mastered make progress visible and keep you motivated through the slow weeks. Try this: keep a simple note of how many days you practiced each week.',
               },
             ],
+          },
+        ],
+      },
+      {
+        heading: 'Phrases that keep you talking while you think',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Fluent speakers pause too; they just fill the pause with a natural phrase instead of going silent. Learn a few of these, and the moments when you search for a word will sound normal instead of awkward:',
+          },
+          {
+            type: 'table',
+            head: ['When you need to…', 'Say'],
+            rows: [
+              ['Buy a moment to think', '"Well…", "Let me think…", "That’s a good question."'],
+              ['Start your answer', '"The thing is…", "To be honest…", "In my experience…"'],
+              ['Explain more clearly', '"What I mean is…", "In other words…"'],
+              ['Fix something you just said', '"Let me put it another way.", "Sorry, I meant…"'],
+              ['Can’t find the exact word', '"It’s like a…", "It’s the thing you use to…"'],
+              ['Add another point', '"Another thing is…", "Also…", "On top of that…"'],
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'A 30-day plan to speak English fluently',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Fifteen to twenty minutes a day is enough. Each week builds on the one before:',
+          },
+          {
+            type: 'table',
+            head: ['Week', 'Focus', 'Every day'],
+            rows: [
+              ['Week 1', 'Start speaking', 'Narrate your day for 2 minutes, learn 5 phrases, send one English voice note.'],
+              ['Week 2', 'Stop translating', 'Describe your surroundings in English, do one round of the 4-3-2 drill.'],
+              ['Week 3', 'Real situations', 'Practice one real-life conversation a day: work, travel, shopping or small talk.'],
+              ['Week 4', 'Polish', 'Record yourself, fix your most common mistake, drill words you mispronounce.'],
+            ],
+          },
+          {
+            type: 'p',
+            text: 'For a minute-by-minute version of a daily session, see our [15-minute daily English speaking practice routine](/guides/daily-english-speaking-practice/).',
           },
         ],
       },
@@ -117,7 +221,27 @@ export const guides: Guide[] = [
         blocks: [
           {
             type: 'p',
-            text: 'With consistent daily speaking practice, most learners feel a clear difference in 4–6 weeks: less hesitation, faster sentence formation, more confidence in familiar topics. Conversational comfort in most everyday situations typically takes 3–6 months. The variable that matters most is not talent or living abroad — it is how many minutes per week you actually spend speaking.',
+            text: 'It depends on where you start and how much you actually speak. If you already understand English well, daily speaking practice usually brings a noticeable difference within a few weeks: shorter pauses, faster sentences and more confidence on familiar topics. Being comfortable in most everyday conversations typically takes several months of regular practice.',
+          },
+          {
+            type: 'p',
+            text: 'The factor that matters most is not talent or living abroad. It is how many minutes each week you spend speaking out loud. Someone who speaks for 15 minutes every day will usually overtake someone who studies for hours but rarely speaks.',
+          },
+        ],
+      },
+      {
+        heading: 'Mistakes that slow down your fluency',
+        blocks: [
+          {
+            type: 'table',
+            head: ['Mistake', 'Do this instead'],
+            rows: [
+              ['Finishing grammar before you start speaking', 'Start speaking now; you will learn the remaining grammar faster through corrections.'],
+              ['Only reading and listening', 'Spend at least half your English time speaking out loud.'],
+              ['Waiting until a sentence is perfect', 'Say it simply, then improve it.'],
+              ['Translating every sentence', 'Use short sentences and phrases you already know.'],
+              ['Practicing once a week for hours', 'Practice for 15 minutes every day.'],
+            ],
           },
         ],
       },
@@ -140,6 +264,16 @@ export const guides: Guide[] = [
     },
     faqs: [
       {
+        question: 'What is fluency in English?',
+        answer:
+          'Fluency in English is the ability to speak smoothly and continuously, at a natural pace, without long pauses to search for words or translate. It is different from accuracy (correct grammar) and from accent. A fluent speaker can still make small mistakes; what matters is that they keep talking and are easy to understand.',
+      },
+      {
+        question: 'Can I speak English fluently with an Indian accent?',
+        answer:
+          'Yes. Fluency is about speaking smoothly and being understood, not about sounding American or British. Millions of fluent English speakers have Indian accents. Focus on clear pronunciation of individual words rather than trying to change your accent.',
+      },
+      {
         question: 'Can I become fluent in English without living abroad?',
         answer:
           'Yes. Immersion helps because it forces daily speaking, but you can recreate that at home: speak English out loud every day, consume English media, and use an AI conversation partner for unlimited real conversations. Consistency matters far more than location.',
@@ -147,7 +281,7 @@ export const guides: Guide[] = [
       {
         question: 'Should I finish grammar first before I start speaking?',
         answer:
-          'No — this is the most common trap. If you can form basic sentences, you know enough grammar to start speaking. You will learn the remaining grammar much faster through corrections in real conversation than through more study.',
+          'No. This is the most common trap. If you can form basic sentences, you know enough grammar to start speaking. You will learn the remaining grammar much faster through corrections in real conversation than through more study.',
       },
       {
         question: 'How many minutes a day should I practice speaking English?',

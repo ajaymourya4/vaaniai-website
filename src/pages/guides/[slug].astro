@@ -129,11 +129,11 @@ const breadcrumbSchema = {
                 )}
                 {block.type === 'table' && (
                   <div class="mt-6 overflow-x-auto rounded-2xl border border-dark-border">
-                    <table class="w-full text-left text-[0.95rem]">
+                    <table class="w-full text-left text-sm sm:text-[0.95rem]">
                       <thead class="bg-dark-card">
                         <tr>
                           {block.head.map((cell) => (
-                            <th scope="col" class="px-4 py-3 font-semibold text-text-primary">{cell}</th>
+                            <th scope="col" class="px-3 sm:px-4 py-3 font-semibold text-text-primary">{cell}</th>
                           ))}
                         </tr>
                       </thead>
@@ -141,7 +141,7 @@ const breadcrumbSchema = {
                         {block.rows.map((row) => (
                           <tr class="border-t border-dark-border">
                             {row.map((cell) => (
-                              <td class="px-4 py-3 text-text-secondary align-top leading-relaxed" set:html={renderInline(cell)} />
+                              <td class="px-3 sm:px-4 py-3 text-text-secondary align-top leading-relaxed" set:html={renderInline(cell)} />
                             ))}
                           </tr>
                         ))}
